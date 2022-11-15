@@ -1,0 +1,99 @@
+/* --------- TRABAJOS -------- */
+
+.section-carousel {
+    background: #555b64;
+    padding: 2rem 0.5rem;
+    .titulo {
+        font-size: 34px;
+        line-height: 34px;
+        margin-bottom: 40px;
+        font-weight: 300;
+        color: white;
+        text-align: center;
+    }
+}
+.carousel-inner {
+    max-width: 1000px;
+    max-height: 600px;
+    margin: 0 auto;
+    box-shadow: 2px 2px 15px #161722;
+    img {
+        object-fit: contain;
+        width: 100%;
+    }
+    .carousel-caption {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #fcfcfc;
+        text-align: center;
+        border-radius: 0.5rem;
+        background-color: rgba(30, 38, 40, 0.8);
+    }
+}
+
+.main {
+    .trabajos {
+        background: white;
+        padding: 60px 0;
+        .contenedor {
+            overflow: visible;
+        }
+        .titulo {
+            font-size: 34px;
+            line-height: 34px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            color: #323068;
+            text-align: center;
+        }
+        .contenedor-trabajos {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .trabajo {
+                width: 32%;
+                margin-bottom: 40px;
+                .thumb {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                img {
+                    width: 100%;
+                    vertical-align: top;
+                    border-radius: 0.5rem;
+                    transition: 0.3s ease;
+                    box-shadow: 1px 1px 10px #000;
+                    &:hover {
+                        animation: zoomInOut 1.5s infinite ;
+                    }
+                }
+                .descripcion {
+                    text-align: center;
+                }
+                .nombre {
+                    font-weight: 700;
+                    color: #3895ea;
+                    margin-bottom: 5px;
+                }
+                .categoria {
+                    font-size: 14px;
+                    color: #636363;
+                }
+            }
+        }
+    }
+}
+
+// zoom animation
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}

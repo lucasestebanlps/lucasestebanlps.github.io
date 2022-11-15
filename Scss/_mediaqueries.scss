@@ -1,0 +1,65 @@
+/* --------- MEDA QUERIES ---------- */
+@media screen and (max-width: 917px) {
+    header {
+        .contenedor {
+            .menu {
+                text-align: center;
+            }
+            .contenedor-texto {
+                margin: 100px;
+                .textos {
+                    .nombre {
+                        font-size: 30px;
+                    }
+                    .profesion {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        .main {
+            .trabajos {
+                .contenedor-trabajos {
+                    justify-content: space-around;
+                    .trabajo {
+                        width: 46%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 556px) {
+    header {
+        .contenedor {
+            .contenedor-texto {
+                margin: 15px;
+                margin-top: 80px;
+                margin-bottom: 100px;
+            }
+        }
+    }
+    .main {
+        .trabajos {
+            .contenedor-trabajos {
+                flex-direction: column;
+                align-items: center;
+                .trabajo {
+                    width: 100%;
+                    max-width: 300px;
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+    footer {
+        .redes-sociales {
+            .contenedor {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 20px 0;
+            }
+        }
+    }
+}

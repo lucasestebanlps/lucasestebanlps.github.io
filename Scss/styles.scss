@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,500;0,600;1,300&display=swap');
+@import 'header', 'main', 'trabajos', 'footer', 'mediaqueries';
+
+body {
+    background: #fff;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
