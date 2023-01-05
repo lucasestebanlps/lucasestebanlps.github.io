@@ -1,26 +1,25 @@
 footer {
-    background-color: #555b64;
+    background: #DEE2E6;
+    body.dark & {
+        background: #00253E;
+    }
     .contacto {
         padding: 30px 20px 0px 20px;
-        .my-email {
-            display: block;
-            text-align: center;
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            &:hover {
-                color: #3d7adb;
-            }
-        }
     }
     .btn-goUp {
         display: flex;
         justify-content: flex-end;
-        width: 95%;
-        margin-bottom: 1rem;
+        margin: 1rem 0;
+        padding: 0.5rem;
         .btn {
+            background: #3d7adb;
             border-radius: 0.2rem;
             padding: 0 0.7rem;
+            outline: none;
+            border: none;
+            &:hover {
+                background: #0e6aff;
+            }
         }
     }
     .titulo {
@@ -28,65 +27,82 @@ footer {
         line-height: 34px;
         margin-bottom: 40px;
         font-weight: 300;
-        color: white;
+        color: #2E343A;
         text-align: center;
         outline: none;
+        body.dark & {
+            color: #f2f2f2;
+        }
     }
-    .formulario {
+    form {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        textarea::placeholder {
-            color: #fff;
-            text-align: center;
-            padding-top: 15px;
+        flex-direction: column;
+        padding: 0.5rem;
+        padding-bottom: 0;
+        .section-inputs {
+            display: flex;
+            gap: 10px;
         }
-        input[type="text"], [type="email"], textarea {
-            border: 2px solid #cecece;
-            border-radius: 5px;
-            padding: 15px 20px;
-            font-size: 20px;
-            color: #a4a4a4;
-            outline: none;
-            transition: 0.2s ease;
-            &:focus {
-                border: 2px solid #3895ea;
-            }
-            &:hover {
-                cursor: pointer;
-            }
-        }
-        input[type="text"], input[type="email"] {
-            width: 49%;
-            margin-bottom: 15px;
-        }
-        textarea {
+        label {
             width: 100%;
-            height: 100px;
-            min-width: 100%;
-            max-width: 100%;
-            min-height: 100px;
-            max-height: 300px;
-            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 2rem;
+            span {
+                font-weight: 600;
+                text-align: center;
+                color: #2E343A;
+                body.dark & {
+                    color: #f2f2f2;
+                }
+            }
+            input, textarea {
+                width: 100%;
+                background-color: #f2f2f2;
+                border-radius: 0.5rem;
+                border: 1px solid transparent;
+                box-shadow: 0px 0px 5px #0000004a;
+                padding: 0.5rem 1rem;
+                outline: none;
+                font-size: 14pt;
+                transition: 0.3s ease;
+                color: #2E343A;
+                text-align: center;
+                body.dark & {
+                    background-color: #00111C;
+                    color: #f2f2f2;
+                }
+                &:hover {
+                    box-shadow: 0px 0px 5px #3d7adb;
+                }
+                &:focus {
+                    border: 1px solid #3d7adb;
+                    box-shadow: 0px 0px 8px #3d7adb;
+                }
+            }
         }
-        .btn {
-            margin: auto;
-            margin-bottom: 40px;
-            background: #3895ea;
-            color: #fff;
+        .submit {
+            background-color: #EA4C89;
             border: none;
-            font-size: 1.2rem;
-            border-radius: 3px;
-            padding: 10px 30px;
+            border-radius: 0.5rem;
+            padding: 0.8rem;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1rem;
             cursor: pointer;
+            transition: 0.3s ease;
             &:hover {
-                background: #387bea;
+                opacity: 0.75;
             }
         }
     }
     .redes-sociales {
-        background: #161722;
+        background: #495057;
         padding-top: 60px;
+        body.dark & {
+            background: #00111C;
+        }
         .contenedor {
             display: flex;
             justify-content: center;

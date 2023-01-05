@@ -5,13 +5,17 @@
     }
     .acerca-de {
         text-align: center;
+        transition: 0.3s ease all;
         .foto {
             margin-top: -60px;
             img {
                 vertical-align: top;
                 border-radius: 50%;
-                border: 5px solid rgba(38, 42, 52, 0.6);
-                
+                border: 5px solid rgba(222, 226, 230, 0.7);
+                transition: 0.3s ease all;
+                body.dark & {
+                    border: 5px solid rgba(0, 37, 62, 0.8);
+                }
             }
         }
         .texto {
@@ -21,6 +25,10 @@
             line-height: 30px;
             width: 80%;
             margin: 40px auto 60px auto;
+            transition: 0.3s ease all;
+            body.dark & {
+                color: #f2f2f2;
+            }
             .titulo {
                 font-size: 34px;
                 line-height: 34px;
@@ -28,6 +36,10 @@
                 font-weight: 300;
                 color: #2E343A;
                 text-align: center;
+                transition: 0.3s ease all;
+                body.dark & {
+                    color: #f2f2f2;
+                }
             }
             .bold {
                 color: #3895ea;

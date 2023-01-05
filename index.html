@@ -15,12 +15,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="contenedor">
             <nav class="menu" id="menu">
                 <a href="" id="btn-projets">Projects</a>
                 <a href="" id="btn-videos">Videos</a>
                 <a href="" id="btn-contact">Contact</a>
+                <button class="switch" id="switch">
+                    <span><i class="bi bi-brightness-high-fill"></i></span>
+                    <span><i class="bi bi-moon-fill"></i></span>
+                </button>
             </nav>
             <div class="contenedor-texto">
                 <div class="textos">
@@ -39,12 +43,12 @@
                 </div>
                 <div class="texto">
                     <h3 class="titulo">About me</h3>
-                    <p>I'm a <span class="bold">front-end web developer</span> with certificates in <span class="bold">HTML</span>, <span class="bold">CSS</span> and <span class="bold">JavaScript</span> and I'm currently learning <span class="bold">ReactJS</span>. I've knowledge of <span class="bold">Jquery, WordPress, digital marketing and SEO</span>. I also love creating content!.</p>
+                    <p>I'm a <span class="bold">front-end web developer</span> with certificates in <span class="bold">HTML</span>, <span class="bold">CSS</span> and <span class="bold">JavaScript</span> and I'm currently learning <span class="bold">ReactJS</span>. I have knowledge of <span class="bold">Jquery, WordPress, digital marketing and SEO</span>. I also love creating content!.</p>
                 </div>
             </div>
         </section>
 
-        <section class="section-carousel" id="sectionCarousel">
+        <section class="section-carousel carousel-dark" id="sectionCarousel">
             <h3 class="titulo">Projects</h3>
             <div id="Projects-carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -71,7 +75,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/proyectos/coinbase.png" class="d-block w-100 main-img" alt="Coinbase HomePage">
+                        <a href="https://github.com/lucasestebanlps/StartUp" target="_blank"><img src="img/proyectos/coinbase.png" class="d-block w-100 main-img" alt="Coinbase HomePage"></a>
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Coinbase clone</h5>
                             <p>Technologies used: HTML5, CSS3, Sass, Bootstrap</p>
@@ -131,19 +135,33 @@
         <section class="contacto" id="contact">
             <div class="contenedor">
                 <h3 class="titulo">Contact me:</h3>
-                <form class="formulario" action="">
-                    <input type="text" placeholder="Name:" name="name" required>
-                    <input type="email" placeholder="Email:" name="correo" required>
-                    <textarea name="mensaje" required placeholder="Not funcional, click the e-mail or social media below" disabled></textarea>
-                    <input class="btn" type="submit" value="Send" disabled>
+                <form action="https://formspree.io/f/mvonpywq" method="POST" id="formulario">
+                    <div class="section-inputs">
+                        <label for="name">
+                            <span>Name:</span>
+                            <input type="text" name="name" id="name" required>
+                        </label>
+                        <label for="email">
+                            <span>Email:</span>
+                            <input type="text" name="email" id="email" required>
+                        </label>
+                    </div>
+                    <label for="subject">
+                        <span>Subject:</span>
+                        <input type="text" name="subject" id="subject" required>
+                    </label>
+                    <label for="message">
+                        <span>Message:</span>
+                        <textarea name="message" id="message" cols="10" rows="5" required></textarea>
+                    </label>
+                    <button class="submit" type="submit">Send</button>
                 </form>
-                <a class="my-email" href="mailto:lucasestebanlps@gmail.com">lucasestebanlps@gmail.com</a>
+                <div class="btn-goUp">
+                    <button class="btn btn-primary d-none d-sm-block" id="btn-goUp">Go Up <i class="bi bi-arrow-up"></i>
+                    </button>
+                </div>
             </div>
         </section>
-        <div class="btn-goUp">
-            <button class="btn btn-success d-none d-sm-block" id="btn-goUp">Go Up <i class="bi bi-arrow-up"></i>
-            </button>
-        </div>
   
         <section class="redes-sociales" id="social-media">
             <div class="contenedor">
@@ -160,4 +178,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script src="../js/jquery-3.6.1.min.js"></script>
 <script src="../js/efectos.js"></script>
+<script src="../js/dark.js"></script>
 </html>

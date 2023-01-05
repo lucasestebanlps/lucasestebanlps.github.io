@@ -8,6 +8,10 @@ body {
     background: #fff;
     font-family: 'JetBrains Mono', monospace;
     font-size: 16px;
+    &.dark {
+        transition: 0.3s ease all;
+        background: #00111C;
+    }
 }
 
 .contenedor {
