@@ -19,9 +19,9 @@ const projects = [
         description: 'A user-friendly tool for quickly obtaining insurance quotes for automobiles.',
         image: '/assets/portfolio/cotizador-seguro.png',
         link: 'https://insurancequoter.netlify.app',
-        technologies: <span class='technologies'>
-        <HtmlIcon /> <TailwindIcon /> <JavascriptIcon />
-    </span>
+        technologies: <span className='technologies'>
+            <HtmlIcon /> <TailwindIcon /> <JavascriptIcon />
+        </span>
     },
     {
         id: 2,
@@ -29,9 +29,9 @@ const projects = [
         description: 'Your one-stop shop for online courses, featuring a fully functional shopping cart for adding, removing, and modifying course selections.',
         image: '/assets/portfolio/carrito-cursos.png',
         link: 'https://shoppingcart-ls.netlify.app/',
-        technologies: <span class='technologies'>
-        <HtmlIcon /> <CssIcon /> <JavascriptIcon />
-    </span>
+        technologies: <span className='technologies'>
+            <HtmlIcon /> <CssIcon /> <JavascriptIcon />
+        </span>
     },
     {
         id: 3,
@@ -39,7 +39,7 @@ const projects = [
         description: ' Instantly check the weather forecast for cities worldwide with this convenient weather lookup tool.',
         image: '/assets/portfolio/buscador-clima.png',
         link: 'https://weather-finder-lps.netlify.app',
-        technologies: <span class='technologies'>
+        technologies: <span className='technologies'>
             <HtmlIcon /> <TailwindIcon /> <JavascriptIcon />
         </span>
     },
@@ -49,7 +49,7 @@ const projects = [
         description: 'A project focused on promoting responsible consumption and sustainability. This is a UX/UI design project of my own, covering the entire process from market research to logo creation.',
         image: '/assets/portfolio/yanouso.jpg',
         link: 'https://www.figma.com/proto/q7kNSHKqujhYKpQuKus32Q/YaNoUso%2FAltaFidelidad?type=design&node-id=1-7205&t=zrN6YcQR8IMHBofJ-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A7077&show-proto-sidebar=1&mode=design',
-        technologies: <span class='technologies'>
+        technologies: <span className='technologies'>
             <FigmaIcon />
         </span>
     },
@@ -59,9 +59,9 @@ const projects = [
         description: 'Explore a vast selection of cars from different manufacturers, filterable by brand, year, doors, price, and more.',
         image: '/assets/portfolio/buscador-autos.jpg',
         link: 'https://car-finder-p.netlify.app',
-        technologies: <span class='technologies'>
-        <HtmlIcon /> <CssIcon /> <JavascriptIcon />
-    </span>
+        technologies: <span className='technologies'>
+            <HtmlIcon /> <CssIcon /> <JavascriptIcon />
+        </span>
     },
     {
         id: 6,
@@ -69,9 +69,9 @@ const projects = [
         description: 'Simplify email sending with this efficient mail delivery service designed to streamline your communication.',
         image: '/assets/portfolio/enviar-mails.png',
         link: 'https://enviar-mails.netlify.app',
-        technologies: <span class='technologies'>
-        <HtmlIcon /> <TailwindIcon /> <JavascriptIcon />
-    </span>
+        technologies: <span className='technologies'>
+            <HtmlIcon /> <TailwindIcon /> <JavascriptIcon />
+        </span>
     },
     {
         id: 7,
@@ -79,9 +79,9 @@ const projects = [
         description: 'Experience the world of cryptocurrency trading with a platform that mirrors the functionality of Coinbase.',
         image: '/assets/portfolio/coinbase-clone.png',
         link: 'https://coinbase-clone-le.netlify.app',
-        technologies: <span class='technologies'>
-        <HtmlIcon /> <CssIcon /> <SassIcon />
-    </span>
+        technologies: <span className='technologies'>
+            <HtmlIcon /> <CssIcon /> <SassIcon />
+        </span>
     },
     {
         id: 8,
@@ -89,9 +89,9 @@ const projects = [
         description: 'A minimalist webpage designed to introduce your startup to the world and make a lasting impression.',
         image: '/assets/portfolio/startup-page.png',
         link: 'https://startup-page-le.netlify.app',
-        technologies: <span class='technologies'>
-        <HtmlIcon /> <CssIcon /> <SassIcon /> <JavascriptIcon /> <BootstrapIcon />
-    </span>
+        technologies: <span className='technologies'>
+            <HtmlIcon /> <CssIcon /> <SassIcon /> <JavascriptIcon /> <BootstrapIcon />
+        </span>
     },
     {
         id: 9,
@@ -99,9 +99,9 @@ const projects = [
         description: 'A visually stunning webpage for a cafe, complete with parallax scrolling effects to captivate visitors.',
         image: '/assets/portfolio/cafe-parallax.png',
         link: 'https://restaurant-parallax.netlify.app',
-        technologies: <span class='technologies'>
-        <HtmlIcon /> <CssIcon /> <JavascriptIcon />
-    </span>
+        technologies: <span className='technologies'>
+            <HtmlIcon /> <CssIcon /> <JavascriptIcon />
+        </span>
     },
     {
         id: 10,
@@ -110,7 +110,7 @@ const projects = [
         image: '/assets/portfolio/first-portfolio.png',
         link: 'https://www.google.com/',
         technologies:
-            <span class='technologies'>
+            <span className='technologies'>
                 <HtmlIcon /> <CssIcon /> <SassIcon /> <JavascriptIcon />
             </span>
     },
@@ -159,18 +159,18 @@ export default function Projects() {
                             <img className='overlay__img' src={project.image} alt={`Mockup of ${project.title} project`} />
                             <h3 className='overlay__title'>{project.title}</h3>
                             <div className="overlay__span">
-                                <div>
-                                    <span className='overlay__span-title h3'>{project.title}</span>
-                                    <div className='overlay__group'>
+                                <div className='overlay__group'>
+                                    <div >
+                                        <span className='overlay__span-title h3'>{project.title}</span>
                                         <span className='overlay__span-description'>{project.description}</span>
-                                        <Button
-                                            className='icon'
-                                            label={<BsFillPlayFill />}
-                                            url={project.link}
-                                        />
+                                        <span>{project.technologies}</span>
                                     </div>
+                                    <Button
+                                        className='icon'
+                                        label={<BsFillPlayFill />}
+                                        url={project.link}
+                                    />
                                 </div>
-                                <span>{project.technologies}</span>
                             </div>
                         </div>
 

@@ -1,6 +1,7 @@
 .about-me {
     display: flex;
     align-items: center;
+    height: 100vh;
     margin-top: var(--spacing-68);
 }
 .about-me__container{
@@ -93,6 +94,8 @@
     .about-me {
         text-align: center;
         gap: 3rem;
+        height: auto;
+        margin-bottom: var(--spacing-68);
     }
     .about-me__container{
         flex-direction: column;

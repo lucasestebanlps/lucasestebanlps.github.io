@@ -38,6 +38,8 @@
     .footer {
         flex-direction: column;
         text-align: center;
+        margin-bottom: var(--spacing-68);
+        height: auto;
     }
     br {
         display: none;

@@ -13,7 +13,7 @@
 }
 
 .grid {
-    margin: var(--spacing-12) 0;
+    margin: var(--spacing-8) 0;
 }
 
 
@@ -57,23 +57,23 @@
     flex-direction: column;
     text-align: left;
     position: absolute;
-    padding: var(--spacing-16);
+    padding: var(--spacing-8) var(--spacing-16);
     backdrop-filter: blur(10px);
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 2;
-    gap: var(--spacing-8);
+    gap: var(--spacing-12);
     transition: 0.3s ease all;
     background-color: rgba(0, 0, 0, 0.788);
 }
 
 .overlay__title {
-    padding: var(--spacing-5, --spacing-12);
+    padding: var(--spacing-5);
     text-align: center;
     position: absolute;
-    border-bottom: 1px solid var(--color-accent);
-    border-right: 1px solid var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+    border-right: 2px solid var(--color-accent);
     z-index: 10;
     letter-spacing: 1px;
     background-color: rgba(0, 0, 0, 0.788);
@@ -84,17 +84,19 @@
 .overlay__group {
     display: flex;
     align-items: center;
-    align-content: center;
-    gap: var(--spacing-16);
+    margin: var(--spacing-5) 0;
 }
 
 .overlay__span-title {
+    display: block;
     color: var(--color-accent);
     letter-spacing: 1px;
 }
 
 .overlay__span-description {
+    display: block;
     font-family: var(--font-secondary);
+    margin-bottom: var(--spacing-5);
 }
 
 
@@ -151,6 +153,7 @@
 
     .projects__grid {
         grid-template-columns: repeat(1, minmax(0, 1fr));
+        column-gap: var(--spacing-12);
     }
 
     .modal {
@@ -158,11 +161,16 @@
         width: 100%;
         justify-content: center;
     }
-
+    .load-projects {
+        justify-content: center;
+        font-size: var(--font-xmedium);
+    }
+    .grid {
+        margin: 0;
+        margin-bottom: var(--spacing-12);
+    }
 }
 
 @media (width <=960px) {
-    .load-projects {
-        justify-content: center;
-    }
+
 }
