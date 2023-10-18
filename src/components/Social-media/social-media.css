@@ -1,0 +1,70 @@
+.buttons__socials {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.buttons__socials a {
+    color: rgba(255, 255, 255, 0.534);
+    display: flex;
+    padding: 0.5rem;
+    font-size: 1.56rem;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    transition: all 0.3s;
+    &:hover {
+        color: white;
+    }
+}
+
+.social__footer {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-36);
+}
+
+.social__footer a{
+    color: rgba(255, 255, 255, 0.534);
+    display: flex;
+    padding: var(--spacing-12);
+    font-size: var(--font-xlarge);
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    transition: all 0.3s;
+    &:hover {
+        color: white;
+    }
+}
+
+
+
+.buttons__socials-linkedin:hover {
+    background-color: rgb(2, 108, 165);
+}
+
+.buttons__socials-github:hover {
+    background-color: rgb(50, 129, 16);
+}
+
+.buttons__socials-youtube:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.buttons__socials-instagram:hover {
+    background-color: rgb(131, 58, 180);
+}
+
+@media (width <= 1200px) {
+    .social__footer {
+        margin-bottom: 6rem;
+    }
+}

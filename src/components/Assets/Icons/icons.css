@@ -1,0 +1,83 @@
+.icons__group {
+    display: flex;
+    flex: 1;
+    gap: var(--spacing-16);
+}
+
+.icons__group--icon {
+    font-size: var(--font-large);
+    transition: all 0.2s ease;
+    padding: 8px;
+    border-radius: 50%;
+    &:hover {
+        transform: scale(1.2);
+        border: 1px solid var(--color-accent);
+    }
+}
+
+.html-icon {
+    color: #e54d26;
+    border: 1px solid var(--color-primary);
+}
+
+
+.css-icon {
+    color: #0170ba;
+    border: 1px solid var(--color-primary);
+}
+
+
+.javascript-icon {
+    color: #f0db4f;
+    border: 1px solid var(--color-primary);
+}
+
+
+.react-icon {
+    color: #61dbfb;
+    border: 1px solid var(--color-primary);
+}
+
+.sass-icon {
+    color: #cc6699;
+    border: 1px solid var(--color-primary);
+}
+
+.bootstrap-icon {
+    color: #563d7c;
+    border: 1px solid var(--color-primary);
+}
+
+.tailwind-icon {
+    color: #38b2ac;
+    border: 1px solid var(--color-primary);
+}
+
+
+.photoshop-icon {
+    color: #001f3f;
+    border: 1px solid var(--color-primary);
+}
+
+.git-icon {
+    color: #f1502f;
+    border: 1px solid var(--color-primary);
+}
+
+.figma-icon {
+    color: #0ac5ea;
+    border: 1px solid var(--color-primary);
+}
+
+.resolve-icon {
+    color: #ff5722;
+    border: 1px solid var(--color-primary);
+}
+
+
+
+@media (width <= 1200px) {
+    .icons__group {
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,111 @@
+.about-me {
+    display: flex;
+    align-items: center;
+    margin-top: var(--spacing-68);
+}
+.about-me__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    margin: 3rem 0 6rem 0; 
+}
+.texts {
+    background-image: url(/assets/services.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -30px;
+    mix-blend-mode: lighten;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+}
+
+.text__container {
+    background-color: rgba(0, 0, 0, 0.788);
+    box-shadow: 1px 1px 15px 15px rgba(0, 0, 0, 0.788);
+}
+
+.text__container--title {
+    padding-bottom: var(--spacing-8);
+}
+
+.text__container--description {
+    max-width: 455px;
+    line-height: 2.875rem;
+    font-weight: 600;
+    font-family: var(--font-primary);
+    font-size: var(--font-xmedium);
+}
+
+.experiences {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: var(--spacing-16);
+}
+
+.experience__container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.205);
+}
+
+.experience__container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-8);
+    
+}
+
+.experience__container-header--title {
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: var(--font-xmedium);
+    color: var(--color-primary);
+    line-height: 1.25;
+}
+
+.experience__container-header--button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-xmedium);
+    width: 40px;
+    height: 40px;
+}
+
+.experience__description {
+    display: block;
+    font-size: var(--font-small);
+    font-family: var(--font-secondary);
+    margin-bottom: var(--spacing-20);
+    letter-spacing: 1px;
+}
+
+@media ( width <= 1200px) {
+    .texts {
+        background-position: -200px;
+    }
+}
+@media ( width <= 960px ) {
+    .about-me {
+        text-align: center;
+        gap: 3rem;
+    }
+    .about-me__container{
+        flex-direction: column;
+    }
+    .texts {
+        background: none;
+    }
+    .text__container--description {
+        font-size: var(--font-xmedium);
+        max-width: 100%;
+    }
+    .experience__container {
+    text-align: left;
+    }
+    
+}

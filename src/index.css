@@ -1,0 +1,144 @@
+/* Color Theme Swatches in Hex
+
+.Diseño-gráfico-1-hex { color: #EAF205; }
+.Diseño-gráfico-2-hex { color: #6F7302; }
+.Diseño-gráfico-3-hex { color: #F2E205; }
+.Diseño-gráfico-4-hex { color: #F2F2F2; }
+.Diseño-gráfico-5-hex { color: #0D0D0D; }
+ */
+
+
+
+:root {
+  /* Font-Family */
+  --font-primary: 'Orbitron', sans-serif;
+  --font-secondary: 'Rajdhani', sans-serif;
+  --font-tertiary: 'Aldrich', sans-serif;
+
+  /* Font-Size */
+  --font-display: 6.25rem;
+  --font-jumbo: 4.8rem;
+  --font-xlarge: 3.3rem;
+  --font-large: 2.5rem;
+  --font-medium: 2rem;
+  --font-xmedium: 1.5rem;
+  --font-small: 1.2rem;
+  --font-xsmall: 0.8rem;
+
+  /* Color */
+  --color-primary: rgb(159, 88, 252);
+  --color-secondary: #F2F2F2;
+  --color-accent: #EAF205;
+  --color-shadow: rgba(111, 115, 2, 0.327);
+  --color-background: #0D0D0D;
+
+  /* Spacings */
+  --spacing-128: 12.8rem;
+  --spacing-68: 6.8rem;
+  --spacing-36: 3.6rem;
+  --spacing-28: 2.8rem;
+  --spacing-24: 2.4rem;
+  --spacing-20: 2rem;
+  --spacing-16: 1.6rem;
+  --spacing-12: 1.2rem;
+  --spacing-8: 0.8rem;
+  --spacing-5: 0.5rem;
+
+  /* 
+      Display sizes
+      sm: '640px',
+      md: '768px',
+      lg: '960px',
+      xl: '1200px', 
+    */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: var(--font-secondary);
+  font-size: 1.125rem;
+  /* Equivalent to 18px for text-lg */
+  line-height: 1.5rem;
+  /* Equivalent to 24px for leading-8 */
+  background-color: var(--color-background);
+  color: var(--color-secondary);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--spacing-8);
+}
+
+
+.h2 {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.h3 {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 1.625rem;
+  line-height: 2.875rem;
+}
+
+.text-gradient {
+  background-image: linear-gradient(to right, #42A6E3, #FF56F6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  font-family: var(--font-primary);
+}
+.social-media-group {
+  background-color: #202020;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 960px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}

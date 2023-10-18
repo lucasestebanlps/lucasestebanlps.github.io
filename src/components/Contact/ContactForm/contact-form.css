@@ -1,0 +1,123 @@
+.form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border-radius: var(--spacing-8);
+    border: 3px solid var(--color-primary);
+    padding: var(--spacing-36) var(--spacing-20);
+    gap: var(--spacing-12);
+  }
+  
+  /* Estilos para grupos de elementos en el formulario */
+  .form__group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative; /* Para posicionar la etiqueta de manera absoluta */
+    margin-bottom: var(--spacing-24); /* Espaciado entre grupos de elementos */
+  }
+  
+  /* Estilos para etiquetas */
+  .form__group label {
+    position: absolute;
+    transform: translateY(10px);
+    transform-origin: left top;
+    transition: all 0.3s ease;
+    font-size: var(--font-small); /* Tamaño de fuente inicial de la etiqueta */
+    font-weight: 500;
+    color: #8e6d92; /* Color de la etiqueta */
+    pointer-events: none; /* Evita que la etiqueta bloquee la interacción con el campo de entrada */
+  }
+  
+  /* Estilos para campos de entrada */
+  .form__group-input {
+    background: transparent;
+    color: white;
+    padding: var(--spacing-5) 0;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    font-size: var(--font-small);
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--color-primary);
+    transition: 0.3s ease all;
+    &:hover {
+        border-bottom: 1px solid rgba(255, 255, 0, 0.493);
+
+    }
+  }
+
+  /* Estilos para campos de entrada con contenido */
+.form__group-input-filled + label {
+    opacity: 1;
+    transform: translateY(-14px) scale(0.8);
+    font-size: var(--font-xmedium);
+    color: var(--color-primary); /* Cambiar color de la etiqueta cuando el input tiene contenido */
+  }
+  
+  /* Estilos para campos de entrada con error */
+  .form__group-input-error {
+    border-bottom: 1px solid #ff4c4c;
+  }
+  
+  /* Estilos para campos de entrada con foco */
+  .form__group-input:focus {
+    border-bottom: 1px solid var(--color-accent);
+    outline: none; /* Evita el borde de enfoque predeterminado */
+  }
+  
+  /* Estilos para campos de entrada con foco y etiqueta elevada */
+  .form__group-input:focus + label {
+    transform: translateY(-14px) scale(0.8);
+    font-size: var(--font-xmedium);
+    color: var(--color-accent); /* Cambiar color de la etiqueta cuando el input tiene foco */
+  }
+  
+  /* Estilos para área de texto */
+  .form__group-textarea {
+    resize: none;
+  }
+  
+  /* Estilos para el botón de envío */
+  .form__group-submit {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Estilos para mensajes de error */
+  .message-error {
+    color: #ff4c4c;
+    text-align: left;
+    font-size: var(--font-small);
+    margin-top: var(--spacing-5);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Estilos para mensajes de éxito */
+  .message-success {
+    background-color: #27922a;
+    color: #fff;
+    border-radius: 16px;
+    font-weight: 500;
+    padding: var(--spacing-12);
+    font-size: var(--font-xmedium);
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Estilos para dispositivos móviles (ancho <= 960px) */
+  @media (max-width: 960px) {
+    .form {
+      width: 100%;
+    }
+  }

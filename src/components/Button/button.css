@@ -1,0 +1,64 @@
+.btn {
+    border-radius: 9999px;
+    font-family: var(--font-primary);
+    color: var(--color-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    text-transform: uppercase;
+    background-color: transparent;
+    transition: 0.3s ease all;
+    border: 1px solid var(--color-accent);
+    box-shadow: 0px 4.42184px 40.23px var(--color-shadow);
+}
+
+.btn:hover {
+    color: var(--color-background);
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+}
+
+
+.btn-sm {
+    height: 3rem;
+    padding: 0.375rem 1.5rem;
+    font-size: 0.875rem;
+}
+
+.btn-lg {
+    height: 3.5rem;
+    padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+}
+
+.btn-link {
+    font-size: 1rem;
+}
+
+
+/* --BUTTON MODAL-- */
+
+.button__modal {
+    color: white;
+    font-family: var(--font-tertiary);
+    font-size: var(--font-small);
+    background-color: transparent;
+    padding-bottom: 2px;
+    border: none;
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-accent);
+    transition: 0.2s ease all;
+}
+
+.btn-disabled {
+    background-color: grey;
+    border: transparent;
+
+    &:hover {
+        background-color: grey;
+        border: transparent;
+        cursor: not-allowed;
+    }
+}
