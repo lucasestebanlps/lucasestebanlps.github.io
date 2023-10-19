@@ -25,7 +25,7 @@ This is my front-end portfolio, showcasing some of my projects and web developme
 
 ## Screenshots
 
-![header screenshot of lucasestebanlps.github.io](./assets/screenshot.jpg)
+![header screenshot of lucasestebanlps.github.io](./public/assets/screenshot.jpg)
 
 ## Usage Instructions
 
