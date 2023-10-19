@@ -6,14 +6,9 @@ This is my front-end portfolio, showcasing some of my projects and web developme
 
 - [Front-End Portfolio](#front-end-portfolio)
   - [Contents](#contents)
-  - [Demo](#demo)
   - [Technologies Used](#technologies-used)
   - [Screenshots](#screenshots)
   - [Usage Instructions](#usage-instructions)
-
-## Demo
-
-// not yet available
 
 ## Technologies Used
 
@@ -21,10 +16,12 @@ This is my front-end portfolio, showcasing some of my projects and web developme
 - CSS3
 - JavaScript
 - React.js
+- Vite
 - Framer-Motion
 - Type-animation
 - React-scroll
 - React-icons
+- React-router-dom
 
 ## Screenshots
 
@@ -33,4 +30,6 @@ This is my front-end portfolio, showcasing some of my projects and web developme
 ## Usage Instructions
 
 1. Clone this repository to your local machine:
-// not yet available
+// git clone "https://github.com/lucasestebanlps/lucasestebanlps.github.io.git"
+
+2. Feel free to modify!

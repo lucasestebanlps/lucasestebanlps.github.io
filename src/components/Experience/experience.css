@@ -86,6 +86,11 @@
 }
 
 @media ( width <= 1200px) {
+    .about-me {
+        height: auto;
+        margin: var(--spacing-68) 0;
+
+    }
     .texts {
         background-position: -200px;
     }
@@ -95,7 +100,6 @@
         text-align: center;
         gap: 3rem;
         height: auto;
-        margin-bottom: var(--spacing-68);
     }
     .about-me__container{
         flex-direction: column;

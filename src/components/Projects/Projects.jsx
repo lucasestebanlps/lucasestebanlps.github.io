@@ -161,7 +161,7 @@ export default function Projects() {
                             <div className="overlay__span">
                                 <div className='overlay__group'>
                                     <div >
-                                        <span className='overlay__span-title h3'>{project.title}</span>
+                                        <span className='overlay__span-title'>{project.title}</span>
                                         <span className='overlay__span-description'>{project.description}</span>
                                         <span>{project.technologies}</span>
                                     </div>
@@ -175,7 +175,7 @@ export default function Projects() {
                         </div>
 
                         {/* Button */}
-                        <div className="modal">
+                        <div className="project__button--responsive">
                             <Button
                                 label='View Demo'
                                 className='button__modal'
