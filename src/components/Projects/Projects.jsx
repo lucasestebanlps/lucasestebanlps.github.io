@@ -6,6 +6,8 @@ import Button from '../Button/Button';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
 import './projects.css';
+import '../Assets/Icons/icons.css'
+
 
 export default function Projects() {
     const [projects, setProjects] = useState([]);
@@ -25,7 +27,7 @@ export default function Projects() {
                 key={tech.name}
                 icon={tech.name}
                 className="icons__group--icon"
-                style={{ color: tech.iconColor }} // Usa el color especificado en el JSON
+                style={{ color: tech.iconColor }}
             />
         ));
     };

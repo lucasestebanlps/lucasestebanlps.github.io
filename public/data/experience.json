@@ -1,0 +1,68 @@
+{
+    "about": {
+        "title": "About me",
+        "description": "Technology enthusiast, passionate about development, and creator of unique experiences."
+    },
+    "experiences": [
+        {
+            "name": "Web developer",
+            "description": "Since venturing into this world, I've dedicated myself to honing my coding skills, gaining hands-on experience through various projects, and acquiring relevant certifications. I'm enthusiastic about transitioning into development as my new career!",
+            "link": "/certifications"
+        },
+        {
+            "name": "UI/UX Design",
+            "description": "My lifelong passion for design has driven me to explore and practice UX/UI design. I'm motivated to create engaging and intuitive user experiences, which I've honed through personal projects.",
+            "link": "/certifications"
+        },
+        {
+            "name": "Sales expert",
+            "description": "In my previous roles, I gained 5+ years of sales experience, mastering customer service, surpassing sales targets, working effectively in teams, and problem-solving."
+        },
+        {
+            "name": "Skills",
+            "description": "Here are the technologies and tools I have mastered:",
+            "skills": [
+                {
+                    "name": "simple-icons:javascript",
+                    "iconColor": "#F7DF1E"
+                },
+                {
+                    "name": "simple-icons:html5",
+                    "iconColor": "#E34F26"
+                },
+                {
+                    "name": "simple-icons:css3",
+                    "iconColor": "#1572B6"
+                },
+                {
+                    "name": "simple-icons:react",
+                    "iconColor": "#61DAFB"
+                },
+                {
+                    "name": "simple-icons:sass",
+                    "iconColor": "#CC6699"
+                },
+                {
+                    "name": "simple-icons:tailwindcss",
+                    "iconColor": "#06B6D4"
+                },
+                {
+                    "name": "simple-icons:figma",
+                    "iconColor": "#F24E1E"
+                },
+                {
+                    "name": "simple-icons:github",
+                    "iconColor": "#ffffff"
+                },
+                {
+                    "name": "simple-icons:flutter",
+                    "iconColor": "#02569B"
+                },
+                {
+                    "name": "simple-icons:firebase",
+                    "iconColor": "#FFCA28"
+                }
+            ]
+        }
+    ]
+}

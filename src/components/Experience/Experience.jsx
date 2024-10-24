@@ -1,51 +1,40 @@
-import React from 'react'
-// icon
-import { GiGraduateCap } from 'react-icons/gi'
+import React, { useEffect, useState } from 'react';
+import { Icon } from '@iconify/react';
 // motion
-import { motion } from 'framer-motion'
-// variants
-import { fadeIn } from '../../variants'
-// css
-import './experience.css'
+import { motion } from 'framer-motion';
 // button
-import { Link as RouterLink } from 'react-router-dom'
-//icons
-import { AllIcons } from '../Assets/Icons/Icons';
-
-
-
-// experience data
-
-const experience = [
-    {
-        name: 'Web developer',
-        description: "Since venturing into this world, I've dedicated myself to honing my coding skills, gaining hands-on experience through various projects, and acquiring relevant certifications. I'm enthusiastic about transitioning into development as my new career!",
-        link: '/certifications'
-    },
-    {
-        name: 'UI/UX Design',
-        description: "My lifelong passion for design has driven me to explore and practice UX/UI design. I'm motivated to create engaging and intuitive user experiences, which I've honed through personal projects.",
-        link: '/certifications'
-    },
-    {
-        name: 'Sales expert',
-        description: "In my previous roles, I gained 5+ years of sales experience, mastering customer service, surpassing sales targets, working effectively in teams, and problem-solving. These skills remain invaluable, enhancing my collaboration, communication, and project efficiency."
-    },
-    {
-        name: 'Skills',
-        description: <AllIcons />
-    },
-]
+import { Link as RouterLink } from 'react-router-dom';
+// icon
+import { GiGraduateCap } from 'react-icons/gi';
+// variants
+import { fadeIn } from '../../variants';
+// css
+import './experience.css';
+import '../Assets/Icons/icons.css'
 
 export default function Experience() {
+    const [experienceData, setExperienceData] = useState([]);
+
+    useEffect(() => {
+        // Cargar el JSON
+        fetch('/data/experience.json')
+            .then((response) => response.json())
+            .then((data) => setExperienceData(data.experiences));
+    }, []);
+
+    // Renderizar iconos de habilidades
+    const renderSkillsIcons = (skills) => {
+        return skills?.map((skill, index) => (
+            <Icon key={index} icon={skill.name} className="icons__group--icon" style={{ color: skill.iconColor }} />
+        ));
+    };
+
     return (
         <section className='about-me' id='about-me'>
-            {/* text & image*/}
-            <div className='container about-me__container'  id='about-me'>
+            {/* Text & Image */}
+            <div className='container about-me__container'>
                 <motion.article
-                    variants={
-                        fadeIn("up", 0.3)
-                    }
+                    variants={fadeIn('up', 0.3)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: false, amount: 0 }}
@@ -55,43 +44,36 @@ export default function Experience() {
                         <h3 className='text__container--description'>Technology enthusiast, passionate about development, and creator of unique experiences.</h3>
                     </div>
                 </motion.article>
-                {/* services */}
+
+                {/* Experiences */}
                 <motion.article
-                    variants={
-                        fadeIn("up", 0.3)
-                    }
+                    variants={fadeIn('up', 0.3)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: false, amount: 0 }}
                     className='experiences'>
-                    {/* service list */}
-                    {experience.map((service, index) => {
-                        {/* destructure service */ }
-                        const { name, description, link } = service;
-                        let linkButton = null;
-                        if (link) {
-                            linkButton = (
-                                <RouterLink to={link} className='btn experience__container-header--button'>
-                                    <GiGraduateCap />
-                                </RouterLink>
-                            );
-                        }
-                        return (
-                            <div className='experience__container' key={index}>
-                                <div className='experience__container-header'>
-                                    <h4 className='experience__container-header--title'>
-                                        {name}
-                                    </h4>
-                                    {linkButton}
-                                </div>
-                                <span className='experience__description'>
-                                    {description}
-                                </span>
+                    {experienceData?.map((experience, index) => (
+                        <div className='experience__container' key={index}>
+                            <div className='experience__container-header'>
+                                <h4 className='experience__container-header--title'>{experience.name}</h4>
+                                {experience.link && (
+                                    <RouterLink to={experience.link} className='btn experience__container-header--button'>
+                                        <GiGraduateCap />
+                                    </RouterLink>
+                                )}
                             </div>
-                        );
-                    })}
+                            <span className='experience__description'>{experience.description}</span>
+
+                            {/* Mostrar skills si existen */}
+                            {experience.skills && (
+                                <div className="skills__icons">
+                                    <span className="icons__group">{renderSkillsIcons(experience.skills)}</span>
+                                </div>
+                            )}
+                        </div>
+                    ))}
                 </motion.article>
             </div>
         </section>
-    )
+    );
 }
