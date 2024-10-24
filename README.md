@@ -27,9 +27,5 @@ This is my front-end portfolio, showcasing some of my projects and web developme
 
 ![header screenshot of lucasestebanlps.github.io](./public/assets/screenshot.jpg)
 
-## Usage Instructions
-
-1. Clone this repository to your local machine:
-// git clone "https://github.com/lucasestebanlps/lucasestebanlps.github.io.git"
-
-2. Feel free to modify!
+## Link:
+https://lucasestebanlps.github.io
