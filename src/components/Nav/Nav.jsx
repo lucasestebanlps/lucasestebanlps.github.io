@@ -1,3 +1,4 @@
+import React from 'react'
 import { FiHome } from 'react-icons/fi';
 import { BsBriefcase, BsBook, BsChatSquare } from 'react-icons/bs';
 import { Link } from 'react-scroll';

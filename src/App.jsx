@@ -1,3 +1,4 @@
+import React from 'react'
 import Contact from './components/Contact/Contact'
 import Experience from './components/Experience/Experience'
 import Header from './components/Header/Header'
@@ -24,8 +25,8 @@ function App() {
     <>
       <ScrollToTop />
       <Routes>
-      <Route path='/' element={<MainPageContent />} />
-      <Route path='/certifications' element={ <CertificationsPage /> }></Route>
+        <Route path='/' element={<MainPageContent />} />
+        <Route path='/certifications' element={<CertificationsPage />}></Route>
       </Routes>
     </>
   )

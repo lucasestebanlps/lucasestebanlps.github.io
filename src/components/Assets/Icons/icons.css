@@ -9,6 +9,9 @@
     transition: all 0.2s ease;
     padding: 8px;
     border-radius: 50%;
+    border: 1px solid var(--color-primary);
+
+
     &:hover {
         transform: scale(1.2);
         border: 1px solid var(--color-accent);
@@ -76,7 +79,7 @@
 
 
 
-@media (width <= 1200px) {
+@media (width <=1200px) {
     .icons__group {
         flex-wrap: wrap;
     }
