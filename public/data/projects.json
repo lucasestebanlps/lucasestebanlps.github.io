@@ -3,7 +3,7 @@
         "id": 1,
         "title": "AutoInsurance Quote",
         "description": "A user-friendly tool for quickly obtaining insurance quotes for automobiles.",
-        "image": "/assets/portfolio/cotizador-seguro.png",
+        "image": "https://i.imgur.com/vlL8nyk.png",
         "link": "https://insurancequoter.netlify.app",
         "technologies": [
             {
@@ -24,7 +24,7 @@
         "id": 2,
         "title": "OnlineCourse Mart",
         "description": "Your one-stop shop for online courses, featuring a fully functional shopping cart for adding, removing, and modifying course selections.",
-        "image": "/assets/portfolio/carrito-cursos.png",
+        "image": "https://i.imgur.com/ymRp3a4.png",
         "link": "https://shoppingcart-ls.netlify.app/",
         "technologies": [
             {
@@ -45,7 +45,7 @@
         "id": 3,
         "title": "CityWeather Lookup",
         "description": "Instantly check the weather forecast for cities worldwide with this convenient weather lookup tool.",
-        "image": "/assets/portfolio/buscador-clima.png",
+        "image": "https://i.imgur.com/AmpTCdD.png",
         "link": "https://weather-finder-lps.netlify.app",
         "technologies": [
             {
@@ -66,7 +66,7 @@
         "id": 4,
         "title": "YaNoUso",
         "description": "A project focused on promoting responsible consumption and sustainability. This is a UX/UI design project of my own, covering the entire process from market research to logo creation.",
-        "image": "/assets/portfolio/yanouso.jpg",
+        "image": "https://i.imgur.com/kZLLmRY.png",
         "link": "https://www.figma.com",
         "technologies": [
             {
@@ -79,7 +79,7 @@
         "id": 5,
         "title": "MultiBrand Car Finder",
         "description": "Explore a vast selection of cars from different manufacturers, filterable by brand, year, doors, price, and more.",
-        "image": "/assets/portfolio/buscador-autos.jpg",
+        "image": "https://i.imgur.com/EJz0n4F.png",
         "link": "https://car-finder-p.netlify.app",
         "technologies": [
             {
@@ -100,7 +100,7 @@
         "id": 6,
         "title": "MailSender Pro",
         "description": "Simplify email sending with this efficient mail delivery service designed to streamline your communication.",
-        "image": "/assets/portfolio/enviar-mails.png",
+        "image": "https://i.imgur.com/Ld51zrY.png",
         "link": "https://enviar-mails.netlify.app",
         "technologies": [
             {
@@ -121,7 +121,7 @@
         "id": 7,
         "title": "Coinbase Clone",
         "description": "Experience the world of cryptocurrency trading with a platform that mirrors the functionality of Coinbase.",
-        "image": "/assets/portfolio/coinbase-clone.png",
+        "image": "https://i.imgur.com/mHyoMrl.png",
         "link": "https://coinbase-clone-le.netlify.app",
         "technologies": [
             {
@@ -142,7 +142,7 @@
         "id": 8,
         "title": "Startup Landing",
         "description": "A minimalist webpage designed to introduce your startup to the world and make a lasting impression.",
-        "image": "/assets/portfolio/startup-page.png",
+        "image": "https://i.imgur.com/9CbPDMw.png",
         "link": "https://startup-page-le.netlify.app",
         "technologies": [
             {
@@ -171,7 +171,7 @@
         "id": 9,
         "title": "Parallax Café",
         "description": "A visually stunning webpage for a cafe, complete with parallax scrolling effects to captivate visitors.",
-        "image": "/assets/portfolio/cafe-parallax.png",
+        "image": "https://i.imgur.com/rRM3VXi.png",
         "link": "https://restaurant-parallax.netlify.app",
         "technologies": [
             {
@@ -192,7 +192,7 @@
         "id": 10,
         "title": "My First Portfolio",
         "description": "A sentimental showcase of my earliest work as a front-end web developer, representing the first version of my portfolio that holds a special place in my heart.",
-        "image": "/assets/portfolio/first-portfolio.png",
+        "image": "https://i.imgur.com/wpas6tY.png",
         "link": "https://www.google.com/",
         "technologies": [
             {
