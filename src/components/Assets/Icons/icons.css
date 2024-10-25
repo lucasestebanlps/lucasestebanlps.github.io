@@ -17,3 +17,9 @@
         border: 1px solid var(--color-accent);
     }
 }
+
+@media (width <=1200px) {
+    .icons__group {
+        flex-wrap: wrap;
+    }
+}
