@@ -64,7 +64,7 @@ export default function ContactForm() {
       variants={fadeIn('up', 0.3)}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0 }}
+      viewport={{ once: true, amount: 0 }}
       className="form"
       onSubmit={handleSubmit}
     >

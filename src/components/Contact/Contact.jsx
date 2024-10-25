@@ -20,7 +20,7 @@ export default function Contact() {
         }
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: false, amount: 0 }}
+        viewport={{ once: true, amount: 0 }}
       >
 
         <h2

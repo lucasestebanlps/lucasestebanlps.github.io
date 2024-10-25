@@ -64,13 +64,27 @@ body {
   overscroll-behavior: none;
 }
 
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  60% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 body {
+  background: linear-gradient(270deg, #0d0d0d 25%, #09003e 50%, #000000 75%);
+  background-size: 1000% 600%;
+  animation: gradientBackground 15s cubic-bezier(0.7, 0.0, 0.7, 0) 2s infinite;
   font-family: var(--font-secondary);
   font-size: 1.125rem;
-  /* Equivalent to 18px for text-lg */
   line-height: 1.5rem;
-  /* Equivalent to 24px for leading-8 */
-  background-color: var(--color-background);
   color: var(--color-secondary);
 }
 

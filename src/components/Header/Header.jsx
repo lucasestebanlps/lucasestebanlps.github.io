@@ -24,7 +24,7 @@ export default function Header() {
                 variants={fadeIn('up', 0.1)}
                 initial='hidden'
                 whileInView={'show'}
-                viewport={{ once: false, amount: 0 }}
+                viewport={{ once: true, amount: 0 }}
                 className='text'>
                 <h1
                     className='text__h1'>LUCAS ESTEBAN
@@ -45,7 +45,7 @@ export default function Header() {
                     />
                 </div>
                 <p className='text__description'>
-                Welcome to my digital world! My approach goes beyond writing code; it's about bringing innovative ideas and solutions to life that positively impact people.
+                    Welcome to my digital world! My approach goes beyond writing code; it's about bringing innovative ideas and solutions to life that positively impact people.
                 </p>
                 <div className='buttons'>
                     <Button
@@ -61,7 +61,7 @@ export default function Header() {
                 variants={fadeIn('down', 0.1)}
                 initial='hidden'
                 whileInView={'show'}
-                viewport={{ once: false, amount: 0 }}
+                viewport={{ once: true, amount: 0 }}
                 className='header__picture'>
                 <img src={Image} alt="Photo of Lucas Esteban" className='header__picture-img' />
             </motion.picture>

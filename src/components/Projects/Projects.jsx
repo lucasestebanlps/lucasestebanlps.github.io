@@ -46,7 +46,7 @@ export default function Projects() {
                 variants={fadeIn('up', 0.3)}
                 initial='hidden'
                 whileInView={'show'}
-                viewport={{ once: false, amount: 0 }}
+                viewport={{ once: true, amount: 0 }}
                 className='projects__title h2'
             >
                 Projects
@@ -60,7 +60,7 @@ export default function Projects() {
                         variants={fadeIn('up', 0.3)}
                         initial='hidden'
                         whileInView={'show'}
-                        viewport={{ once: false, amount: 0 }}
+                        viewport={{ once: true, amount: 0 }}
                     >
                         <div className='overlay'>
                             <img className='overlay__img' src={project.image} alt={`Mockup of ${project.title} project`} />
@@ -96,7 +96,7 @@ export default function Projects() {
                 variants={fadeIn('up', 0.3)}
                 initial='hidden'
                 whileInView={'show'}
-                viewport={{ once: false, amount: 0 }}
+                viewport={{ once: true, amount: 0 }}
             >
                 <Button
                     onClick={loadMoreProjects}

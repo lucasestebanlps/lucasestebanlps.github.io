@@ -37,7 +37,7 @@ export default function Experience() {
                     variants={fadeIn('up', 0.3)}
                     initial="hidden"
                     whileInView={"show"}
-                    viewport={{ once: false, amount: 0 }}
+                    viewport={{ once: true, amount: 0 }}
                     className='texts'>
                     <div className='text__container'>
                         <h2 className='h2 text__container--title '>About me</h2>
@@ -50,7 +50,7 @@ export default function Experience() {
                     variants={fadeIn('up', 0.3)}
                     initial="hidden"
                     whileInView={"show"}
-                    viewport={{ once: false, amount: 0 }}
+                    viewport={{ once: true, amount: 0 }}
                     className='experiences'>
                     {experienceData?.map((experience, index) => (
                         <div className='experience__container' key={index}>

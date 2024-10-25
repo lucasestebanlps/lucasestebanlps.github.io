@@ -1,7 +1,9 @@
 .projects {
     align-items: center;
     margin: var(--spacing-68) auto;
+    min-height: 100vh;
 }
+
 .projects__title {
     line-height: 1.25;
 }
@@ -166,10 +168,12 @@
         width: 100%;
         justify-content: center;
     }
+
     .load-projects {
         justify-content: center;
         font-size: var(--font-xmedium);
     }
+
     .grid {
         margin: 0;
         margin-bottom: var(--spacing-12);
@@ -181,11 +185,13 @@
         justify-content: space-between;
         padding: var(--spacing-5);
     }
-    .overlay__span-title{
+
+    .overlay__span-title {
         font-size: var(--font-small);
         margin-bottom: var(--spacing-8);
     }
+
     .overlay__span-description {
-       display: none;
+        display: none;
     }
 }
