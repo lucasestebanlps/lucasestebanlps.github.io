@@ -5,22 +5,25 @@
     },
     "experiences": [
         {
-            "name": "Web developer",
-            "description": "Since venturing into this world, I've dedicated myself to honing my coding skills, gaining hands-on experience through various projects, and acquiring relevant certifications. I'm enthusiastic about transitioning into development as my new career!",
-            "link": "/certifications"
+            "name": "Flutter Developer",
+            "description": "With hands-on experience in real-world projects like Applichiamoci and Events, I have developed solutions that impact people's lives. Leveraging Flutter and Firebase, I specialize in building scalable, high-performance applications. Check out the Projects section to explore more."
         },
         {
-            "name": "UI/UX Design",
-            "description": "My lifelong passion for design has driven me to explore and practice UX/UI design. I'm motivated to create engaging and intuitive user experiences, which I've honed through personal projects.",
-            "link": "/certifications"
+            "name": "UI/UX Designer",
+            "description": "Designing intuitive and engaging user interfaces has been a key part of my work. In projects like Applichiamoci, I focus on creating smooth, user-centered experiences that balance aesthetics with functionality, ensuring every detail enhances usability."
         },
         {
-            "name": "Sales expert",
-            "description": "In my previous roles, I gained 5+ years of sales experience, mastering customer service, surpassing sales targets, working effectively in teams, and problem-solving."
+            "name": "Sales Expert",
+            "description": "With 5+ years of experience in sales, I excelled in customer service, exceeded targets, and developed strong problem-solving skills. These abilities have sharpened my communication skills and teamwork, which I apply daily in tech projects and collaborations."
+        },
+        {
+            "name": "Studies",
+            "description": "I studied Communication Design at the University of La Plata for two years, gaining valuable skills in design and communication. Additionally, I have completed several courses in development and design, and I'm preparing to start my studies in Computer Science in Copenhagen in the upcoming year.",
+            "link": "/certifications"
         },
         {
             "name": "Skills",
-            "description": "Here are the technologies and tools I have mastered:",
+            "description": "I have honed a diverse set of technologies and tools throughout my journey:",
             "skills": [
                 {
                     "name": "simple-icons:javascript",

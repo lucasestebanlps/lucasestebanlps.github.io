@@ -1,77 +1,43 @@
-import React from 'react'
-import { useEffect } from 'react'
-import { Link as RouterLink } from 'react-router-dom'
-import { BiArrowBack } from 'react-icons/bi'
-import { motion } from 'framer-motion'
-import SocialMedia from '../components/Social-media/SocialMedia'
-import { fadeIn } from '../components/Assets/variants'
-import './certifications-page.css'
-
-const certifications = [
-  {
-    name: 'UX/UI design',
-    year: 2023,
-    institution: 'Codo a codo',
-    img: '/assets/certifications/diseñouxui-codoacodo.jpg'
-  },
-  {
-    name: 'Web design',
-    year: 2022,
-    institution: 'Udemy',
-    img: '/assets/certifications/diseñoWeb-udemy.jpg'
-  },
-  {
-    name: 'Javascript',
-    year: 2022,
-    institution: 'Open Bootcamp',
-    img: '/assets/certifications/javascript-openbootcamp.jpg'
-  },
-  {
-    name: 'Digital marketing',
-    year: 2022,
-    institution: 'Google',
-    img: '/assets/certifications/digitalMarketing-google.jpg'
-  },
-  {
-    name: 'HTML & CSS',
-    year: 2022,
-    institution: 'Open Bootcamp',
-    img: '/assets/certifications/htmlCss-openbootcamp.jpg'
-  },
-  {
-    name: 'Programming Concepts',
-    year: 2022,
-    institution: 'Open Bootcamp',
-    img: '/assets/certifications/conceptosProgramacion-openbootcamp.jpg'
-  },
-  {
-    name: 'Programming Logic',
-    year: 2022,
-    institution: 'Udemy',
-    img: '/assets/certifications/logica-udemy.jpg'
-  },
-]
+import React, { useEffect, useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
+import { BiArrowBack } from 'react-icons/bi';
+import { motion } from 'framer-motion';
+import SocialMedia from '../components/Social-media/SocialMedia';
+import { fadeIn } from '../components/Assets/variants';
+import './certifications-page.css';
 
 export default function CertificationsPage() {
+  const [certifications, setCertifications] = useState([]);
+
   useEffect(() => {
-    const tiltElements = document.querySelectorAll('.tilt-effect');
-
-    tiltElements.forEach((element) => {
-      element.addEventListener('mousemove', handleMove);
-      element.addEventListener('mouseout', handleMouseOut);
-      element.addEventListener('mousedown', handleMouseDown);
-      element.addEventListener('mouseup', handleMouseUp);
-    });
-
-    return () => {
-      tiltElements.forEach((element) => {
-        element.removeEventListener('mousemove', handleMove);
-        element.removeEventListener('mouseout', handleMouseOut);
-        element.removeEventListener('mousedown', handleMouseDown);
-        element.removeEventListener('mouseup', handleMouseUp);
-      });
-    };
+    // Cargar los datos desde el archivo JSON
+    fetch('/data/certifications.json')
+      .then(response => response.json())
+      .then(data => setCertifications(data.certifications));
   }, []);
+
+  // Aplicar el efecto tilt después de que los certificados se hayan cargado
+  useEffect(() => {
+    if (certifications.length > 0) {
+      const tiltElements = document.querySelectorAll('.tilt-effect');
+
+      tiltElements.forEach((element) => {
+        element.addEventListener('mousemove', handleMove);
+        element.addEventListener('mouseleave', handleMouseOut);
+        element.addEventListener('mousedown', handleMouseDown);
+        element.addEventListener('mouseup', handleMouseUp);
+      });
+
+      return () => {
+        tiltElements.forEach((element) => {
+          element.removeEventListener('mousemove', handleMove);
+          element.removeEventListener('mouseleave', handleMouseOut);
+          element.removeEventListener('mousedown', handleMouseDown);
+          element.removeEventListener('mouseup', handleMouseUp);
+        });
+      };
+    }
+  }, [certifications]); // Este useEffect se dispara cuando las certificaciones se cargan
 
   function handleMove(e) {
     const el = e.currentTarget;
@@ -104,9 +70,7 @@ export default function CertificationsPage() {
     <>
       <div className='top-menu'>
         <div className='container top-menu__group'>
-          <RouterLink
-            to='/'
-            className='top-menu__group--link'>
+          <RouterLink to='/' className='top-menu__group--link'>
             <BiArrowBack className='top-menu__group--icon' />
           </RouterLink>
           <SocialMedia className='buttons__socials' />
@@ -114,9 +78,7 @@ export default function CertificationsPage() {
       </div>
       <section className='container certifications'>
         <motion.h2
-          variants={
-            fadeIn("up", 0.3)
-          }
+          variants={fadeIn("up", 0.3)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true }}
@@ -124,9 +86,7 @@ export default function CertificationsPage() {
           Study
         </motion.h2>
         <motion.p
-          variants={
-            fadeIn("up", 0.3)
-          }
+          variants={fadeIn("up", 0.3)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true }}
@@ -135,28 +95,24 @@ export default function CertificationsPage() {
         </motion.p>
         <article className="certifications__grid">
           {certifications.map((certification, index) => {
-            const { name, year, institution, img } = certification
+            const { name, year, institution, img } = certification;
             return (
               <motion.div
                 key={index}
-                variants={
-                  index % 2 === 0
-                    ? fadeIn("right", 0.1)
-                    : fadeIn("left", 0.1)
-                }
+                variants={index % 2 === 0 ? fadeIn("right", 0.1) : fadeIn("left", 0.1)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: true }}
                 className='element tilt-effect'>
                 <h3 className='element__name'> {name} </h3>
-                <img className='element__img' src={img} alt={`Mockup of ${name} project`} />
+                <img className='element__img' src={img} alt={`Certificate of ${name}`} />
                 <span className='element__institution'> {institution} </span>
                 <span className='element__year'> {year} </span>
               </motion.div>
-            )
+            );
           })}
         </article>
       </section>
     </>
-  )
+  );
 }

@@ -1,0 +1,46 @@
+{
+    "certifications": [
+        {
+            "name": "UX/UI Design",
+            "year": 2023,
+            "institution": "Codo a Codo",
+            "img": "/assets/certifications/diseñouxui-codoacodo.jpg"
+        },
+        {
+            "name": "Web Design",
+            "year": 2022,
+            "institution": "Udemy",
+            "img": "/assets/certifications/diseñoWeb-udemy.jpg"
+        },
+        {
+            "name": "Javascript",
+            "year": 2022,
+            "institution": "Open Bootcamp",
+            "img": "/assets/certifications/javascript-openbootcamp.jpg"
+        },
+        {
+            "name": "Digital Marketing",
+            "year": 2022,
+            "institution": "Google",
+            "img": "/assets/certifications/digitalMarketing-google.jpg"
+        },
+        {
+            "name": "HTML & CSS",
+            "year": 2022,
+            "institution": "Open Bootcamp",
+            "img": "/assets/certifications/htmlCss-openbootcamp.jpg"
+        },
+        {
+            "name": "Programming Concepts",
+            "year": 2022,
+            "institution": "Open Bootcamp",
+            "img": "/assets/certifications/conceptosProgramacion-openbootcamp.jpg"
+        },
+        {
+            "name": "Programming Logic",
+            "year": 2022,
+            "institution": "Udemy",
+            "img": "/assets/certifications/logica-udemy.jpg"
+        }
+    ]
+}

@@ -1,6 +1,23 @@
 [
     {
         "id": 1,
+        "title": "Applichiamoci",
+        "description": "Design and development of Applichiamoci, an app to connect those in need with vital resources. Available on Play Store :)",
+        "image": "https://i.imgur.com/DsMQHLt.png",
+        "link": "https://play.google.com/store/apps/details?id=com.fonzadione_emmanuel.applichiamoc",
+        "technologies": [
+            {
+                "name": "simple-icons:flutter",
+                "iconColor": "#E34F26"
+            },
+            {
+                "name": "simple-icons:firebase",
+                "iconColor": "#F57C00"
+            }
+        ]
+    },
+    {
+        "id": 1,
         "title": "AutoInsurance Quote",
         "description": "A user-friendly tool for quickly obtaining insurance quotes for automobiles.",
         "image": "https://i.imgur.com/vlL8nyk.png",
