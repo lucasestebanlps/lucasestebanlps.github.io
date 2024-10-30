@@ -1,0 +1,78 @@
+.firefly-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+    /* Para que esté detrás del contenido */
+}
+
+/* Animación con variación en tamaño y movimiento */
+.firefly {
+    position: absolute;
+    width: calc(2px + 2 * var(--size-factor));
+    /* Tamaño variable */
+    height: calc(2px + 2 * var(--size-factor));
+    border-radius: 50%;
+    animation: move var(--duration) linear infinite, blink var(--blink-duration) ease-in-out infinite;
+}
+
+/* Color */
+.firefly.color-primary {
+    background-color: var(--color-primary);
+    box-shadow: 0 0 10px 5px rgba(159, 88, 252, 0.679);
+}
+
+.firefly.color-accent {
+    background-color: var(--color-accent);
+    box-shadow: 0 0 10px 5px rgba(234, 242, 5, 0.586);
+}
+
+/* Animación de movimiento */
+@keyframes move {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(50vw, -50vh) scale(0.8);
+        /* Escalado para alejarse */
+    }
+
+    50% {
+        transform: translate(-50vw, 50vh) scale(1.2);
+        /* Escalado para acercarse */
+    }
+
+    75% {
+        transform: translate(50vw, -100vh) scale(0.9);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+/* Parpadeo con opacidad variable */
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 0.9;
+    }
+
+    40% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+}
