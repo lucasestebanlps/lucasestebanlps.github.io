@@ -14,7 +14,7 @@ import { TypeAnimation } from 'react-type-animation'
 // css
 import './header.css'
 
-const cvFileName = '/assets/cv-italiano.pdf'
+const cvFileName = '/assets/CV-Lucas-Esteban.pdf'
 
 
 export default function Header() {
