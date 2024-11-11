@@ -1,9 +1,9 @@
 import React from 'react'
 import { FaLinkedin, FaGithub, FaYoutube, FaInstagram } from 'react-icons/fa'
 import './social-media.css'
-import Button from '../Button/Button'
+import Button from '../Assets/Button/Button'
 
-export default function SocialMedia({className}) {
+export default function SocialMedia({ className }) {
     return (
         <article className={className}>
             <Button

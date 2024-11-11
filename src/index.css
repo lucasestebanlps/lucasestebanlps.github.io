@@ -6,7 +6,12 @@
 .Diseño-gráfico-4-hex { color: #F2F2F2; }
 .Diseño-gráfico-5-hex { color: #0D0D0D; }
  */
-
+@font-face {
+  font-family: "Liberty";
+  src: url('/fonts/liberty.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 :root {

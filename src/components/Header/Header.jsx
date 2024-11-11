@@ -3,12 +3,12 @@ import React from 'react'
 // assets
 import Image from '/assets/avatar.png'
 import SocialMedia from '../Social-media/SocialMedia'
-import Button from '../Button/Button'
+import Button from '../Assets/Button/Button'
 
 // motion
 import { motion } from 'framer-motion'
 // variants
-import { fadeIn } from '../../variants.js';
+import { fadeIn } from '../Assets/variants';
 // type animation
 import { TypeAnimation } from 'react-type-animation'
 // css
@@ -52,7 +52,7 @@ export default function Header() {
                         label={'Download CV'}
                         url={cvFileName}
                         className='btn btn-lg'
-                        download='cv-italiano.pdf'
+                        download='CV-Lucas-Esteban.pdf'
                     />
                     <SocialMedia className='buttons__socials' />
                 </div>

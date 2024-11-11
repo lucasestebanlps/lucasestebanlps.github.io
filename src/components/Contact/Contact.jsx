@@ -4,7 +4,7 @@ import ContactForm from './ContactForm/ContactForm';
 // motion
 import { motion } from 'framer-motion'
 // variants
-import { fadeIn } from '../../variants';
+import { fadeIn } from '../Assets/variants';
 // css
 import './Contact.css'
 

@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Icon } from '@iconify/react';
 import { BsFillPlayFill } from 'react-icons/bs';
 
-import Button from '../Button/Button';
+import Button from '../Assets/Button/Button'
 import { motion } from 'framer-motion';
-import { fadeIn } from '../../variants';
+import { fadeIn } from '../Assets/variants';
 import './projects.css';
 import '../Assets/Icons/icons.css'
 
