@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from '../../../Hooks/useForm.js';
 import { motion } from 'framer-motion';
-import { fadeIn } from '../../../variants.js';
+import { fadeIn } from '../../Assets/variants';
 import Spinner from '../../Spinner/Spinner.jsx';
 import './contact-form.css';
 
@@ -48,15 +48,20 @@ export default function ContactForm() {
     handleSubmit,
   } = useForm(initialForm, validationsForm);
 
-  // handle css .form__group-input-filled
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
+  // Habilitar el botón solo cuando todos los campos estén completos y no haya errores
+  useEffect(() => {
+    const isFormComplete = form.name && form.email && form.message;
+    const hasErrors = Object.values(errors).some(error => error);
+    setIsButtonDisabled(!(isFormComplete && !hasErrors));
+  }, [form, errors]);
+
   const handleInputChange = (e) => {
+    handleChange(e);
     const inputElement = e.target;
     const inputValue = inputElement.value.trim();
-    if (inputValue.length >= 1 || inputElement.autocomplete === "on") {
-      inputElement.classList.add('form__group-input-filled');
-    } else {
-      inputElement.classList.remove('form__group-input-filled');
-    }
+    inputElement.classList.toggle('form__group-input-filled', inputValue.length >= 1 || inputElement.autocomplete === "on");
   };
 
   return (
@@ -73,16 +78,9 @@ export default function ContactForm() {
           type="text"
           id="name"
           name="name"
-          className={
-            errors.name
-              ? 'form__group-input form__group-input-error'
-              : 'form__group-input'
-          }
+          className={errors.name ? 'form__group-input form__group-input-error' : 'form__group-input'}
           value={form.name}
-          onChange={(e) => {
-            handleChange(e);
-            handleInputChange(e);
-          }}
+          onChange={handleInputChange}
           required
         />
         <label htmlFor="name">Name</label>
@@ -93,16 +91,9 @@ export default function ContactForm() {
           type="email"
           id="email"
           name="email"
-          className={
-            errors.email
-              ? 'form__group-input form__group-input-error'
-              : 'form__group-input'
-          }
+          className={errors.email ? 'form__group-input form__group-input-error' : 'form__group-input'}
           value={form.email}
-          onChange={(e) => {
-            handleChange(e);
-            handleInputChange(e);
-          }}
+          onChange={handleInputChange}
           required
         />
         <label htmlFor="email">Email</label>
@@ -113,16 +104,9 @@ export default function ContactForm() {
           id="message"
           name="message"
           rows="4"
-          className={
-            errors.message
-              ? 'form__group-input form__group-textarea form__group-input-error'
-              : 'form__group-input form__group-textarea'
-          }
+          className={errors.message ? 'form__group-input form__group-textarea form__group-input-error' : 'form__group-input form__group-textarea'}
           value={form.message}
-          onChange={(e) => {
-            handleChange(e);
-            handleInputChange(e);
-          }}
+          onChange={handleInputChange}
           required
         ></textarea>
         <label htmlFor="message">Message</label>
@@ -132,12 +116,8 @@ export default function ContactForm() {
         type="submit"
         name="submit"
         value="Submit"
-        onClick={handleSubmit}
-        className={
-          errors.name || errors.email || errors.message
-            ? 'btn btn-lg form__group-submit btn-disabled'
-            : 'btn btn-lg form__group-submit'
-        }
+        disabled={isButtonDisabled}
+        className={isButtonDisabled ? 'btn btn-lg form__group-submit btn-disabled' : 'btn btn-lg form__group-submit'}
       />
       {loading && <Spinner />}
       {response && <p className="message-success">Sent successfully!</p>}
