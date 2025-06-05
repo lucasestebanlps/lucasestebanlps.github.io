@@ -48,12 +48,7 @@ export default function Header() {
                     Welcome to my digital world! My approach goes beyond writing code; it's about bringing innovative ideas and solutions to life that positively impact people.
                 </p>
                 <div className='buttons'>
-                    <Button
-                        label={'Download CV'}
-                        url={cvFileName}
-                        className='btn btn-lg'
-                        download='cv-italiano.pdf'
-                    />
+
                     <SocialMedia className='buttons__socials' />
                 </div>
             </motion.article>

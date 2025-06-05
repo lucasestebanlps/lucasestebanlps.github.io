@@ -47,10 +47,13 @@ export default function Experience() {
                             key={`experience-${index}`}
                             className={`experience__container ${index % 2 === 0 ? "left" : "right"}`}
                             initial="hidden"
+                            animate="show"
+                            exit={{ opacity: 0, y: 50 }}
                             whileInView="show"
                             viewport={{ once: true, amount: 0.3 }}
                             variants={fadeIn(index % 2 === 0 ? "right" : "left", 0.1)}
                             transition={{ duration: 0.5, delay: index * 0.2 }}
+
                         >
                             <div className="experience__container-header">
                                 <h4 className="experience__container-header--title">
