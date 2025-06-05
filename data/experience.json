@@ -2,19 +2,19 @@
     "experiences": [
         {
             "name": "Flutter Developer",
-            "description": "Experienced in developing impactful solutions using Flutter and Firebase, with projects like Applichiamoci and Events."
+            "description": "Experienced in building production-ready mobile apps using Flutter and Firebase, such as Applichiamoci and Eventz. Skilled in scalable architecture, geolocation, push notifications, and custom UI."
         },
         {
             "name": "UI/UX Designer",
-            "description": "Focused on creating smooth, user-centered interfaces that balance aesthetics with functionality."
+            "description": "Focused on crafting intuitive, user-centered interfaces that merge aesthetics with usability."
         },
         {
             "name": "Sales Expert",
-            "description": "Over 5 years in sales, excelling in customer service, target achievement, and teamwork, which I apply in tech collaborations."
+            "description": "Over 5 years of experience in customer service and sales. Strong communication and goal-oriented mindset, which I bring into technical and collaborative projects."
         },
         {
             "name": "Studies",
-            "description": "Studied Communication Design and completed courses in development. Preparing for Computer Science studies in Copenhagen.",
+            "description": "Background in Communication Design with additional development courses. Currently preparing for Computer Science studies in Copenhagen.",
             "link": "/certifications"
         },
         {
