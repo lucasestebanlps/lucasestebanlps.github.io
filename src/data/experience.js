@@ -10,8 +10,8 @@ export const experiences = [
   {
     name: { en: 'Developer', es: 'Desarrollador' },
     description: {
-      en: 'I build web and mobile products with JavaScript (React, plus Flutter & Dart for mobile) and back them with Firebase, including Cloud Functions written in TypeScript. I care about clean architecture, real shipping and learning new languages fast.',
-      es: 'Construyo productos web y mobile con JavaScript (React, y Flutter & Dart para mobile) sobre Firebase, incluyendo Cloud Functions escritas en TypeScript. Me importa la arquitectura limpia, lanzar de verdad y aprender lenguajes nuevos rápido.',
+      en: "I build web and mobile products with JavaScript (React) and Flutter, leaning heavily on AI as part of how I design, write and ship — including Firebase backends with Cloud Functions in TypeScript. Building since 2023, I focus on shipping real, complete products and learning whatever a project needs, fast.",
+      es: 'Construyo productos web y mobile con JavaScript (React) y Flutter, apoyándome fuerte en IA como parte de cómo diseño, programo y lanzo — incluyendo backends en Firebase con Cloud Functions en TypeScript. Construyendo desde 2023, me enfoco en entregar productos reales y completos y en aprender rápido lo que cada proyecto necesite.',
     },
   },
   {
