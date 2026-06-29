@@ -1,6 +1,23 @@
 {
   "projects": [
     {
+      "title": "Roomies",
+      "description": {
+        "en": "A roommate-living app I'm building with Flutter (GetX) and a serious Firebase backend — Auth, Firestore, Storage, Messaging and 12 TypeScript Cloud Functions. Manage shared houses, chores, Splitwise-style expenses with AI receipt scanning, events and a full notification system.",
+        "es": "Una app de convivencia para compañeros de piso que estoy desarrollando con Flutter (GetX) y un backend serio en Firebase — Auth, Firestore, Storage, Messaging y 12 Cloud Functions en TypeScript. Gestión de casas compartidas, tareas, gastos estilo Splitwise con escaneo de tickets por IA, eventos y un sistema de notificaciones completo."
+      },
+      "image": "/assets/projects/roomies.webp",
+      "link": "",
+      "featured": true,
+      "comingSoon": true,
+      "technologies": [
+        { "name": "simple-icons:flutter", "iconColor": "#02569B" },
+        { "name": "simple-icons:dart", "iconColor": "#0175C2" },
+        { "name": "simple-icons:firebase", "iconColor": "#FFCA28" },
+        { "name": "simple-icons:typescript", "iconColor": "#3178C6" }
+      ]
+    },
+    {
       "title": "EventzWay",
       "description": {
         "en": "A full-featured event platform built end-to-end by me with Flutter & Dart and powered by Firebase, packed with a wide range of features. Available on Google Play and the App Store.",
