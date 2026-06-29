@@ -1,0 +1,48 @@
+backend:
+  name: github
+  repo: lucasestebanlps/lucasestebanlps.github.io
+  branch: main
+  commit_messages:
+    create: 'cms: create {{collection}} "{{slug}}"'
+    update: 'cms: update {{collection}} "{{slug}}"'
+    uploadMedia: 'cms: upload {{path}}'
+    deleteMedia: 'cms: delete {{path}}'
+
+# Lets you edit locally without authentication:
+#   1) run `npx decap-server`
+#   2) run `npm run dev`
+#   3) open http://localhost:5173/admin/
+local_backend: true
+
+# Where uploaded images are stored and how they are referenced in the site.
+media_folder: 'public/assets/projects'
+public_folder: '/assets/projects'
+
+collections:
+  - name: 'content'
+    label: 'Content'
+    files:
+      - name: 'projects'
+        label: 'Projects'
+        file: 'src/data/projects.json'
+        description: 'Add, edit, reorder or remove portfolio projects.'
+        fields:
+          - name: 'projects'
+            label: 'Projects'
+            label_singular: 'Project'
+            widget: 'list'
+            summary: '{{fields.title}}'
+            fields:
+              - { name: 'title', label: 'Title', widget: 'string' }
+              - { name: 'description', label: 'Description', widget: 'text' }
+              - { name: 'image', label: 'Screenshot', widget: 'image' }
+              - { name: 'link', label: 'Demo / store URL', widget: 'string' }
+              - { name: 'featured', label: 'Featured (shown first)', widget: 'boolean', default: false }
+              - name: 'technologies'
+                label: 'Technologies'
+                label_singular: 'Technology'
+                widget: 'list'
+                summary: '{{fields.name}}'
+                fields:
+                  - { name: 'name', label: 'Icon name (e.g. simple-icons:react)', widget: 'string', hint: 'Find names at https://icones.js.org — use the simple-icons set.' }
+                  - { name: 'iconColor', label: 'Icon color (hex)', widget: 'string', default: '#FFFFFF' }

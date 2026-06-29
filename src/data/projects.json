@@ -1,0 +1,123 @@
+{
+  "projects": [
+    {
+      "title": "Applichiamoci",
+      "description": "Design and development of Applichiamoci, an app to connect those in need with vital resources. Available on Play Store :)",
+      "image": "/assets/projects/applichiamoci.png",
+      "link": "https://play.google.com/store/apps/details?id=com.fonzadione_emmanuel.applichiamoc",
+      "featured": true,
+      "technologies": [
+        { "name": "simple-icons:flutter", "iconColor": "#02569B" },
+        { "name": "simple-icons:firebase", "iconColor": "#FFCA28" }
+      ]
+    },
+    {
+      "title": "AutoInsurance Quote",
+      "description": "A user-friendly tool for quickly obtaining insurance quotes for automobiles.",
+      "image": "/assets/projects/autoinsurance-quote.jpg",
+      "link": "https://insurancequoter.netlify.app",
+      "featured": false,
+      "technologies": [
+        { "name": "simple-icons:html5", "iconColor": "#E34F26" },
+        { "name": "simple-icons:tailwindcss", "iconColor": "#06B6D4" },
+        { "name": "simple-icons:javascript", "iconColor": "#F7DF1E" }
+      ]
+    },
+    {
+      "title": "OnlineCourse Mart",
+      "description": "Your one-stop shop for online courses, featuring a fully functional shopping cart for adding, removing, and modifying course selections.",
+      "image": "/assets/projects/onlinecourse-mart.jpg",
+      "link": "https://shoppingcart-ls.netlify.app/",
+      "featured": false,
+      "technologies": [
+        { "name": "simple-icons:html5", "iconColor": "#E34F26" },
+        { "name": "simple-icons:css3", "iconColor": "#1572B6" },
+        { "name": "simple-icons:javascript", "iconColor": "#F7DF1E" }
+      ]
+    },
+    {
+      "title": "CityWeather Lookup",
+      "description": "Instantly check the weather forecast for cities worldwide with this convenient weather lookup tool.",
+      "image": "/assets/projects/cityweather-lookup.jpg",
+      "link": "https://weather-finder-lps.netlify.app",
+      "featured": false,
+      "technologies": [
+        { "name": "simple-icons:html5", "iconColor": "#E34F26" },
+        { "name": "simple-icons:tailwindcss", "iconColor": "#06B6D4" },
+        { "name": "simple-icons:javascript", "iconColor": "#F7DF1E" }
+      ]
+    },
+    {
+      "title": "YaNoUso",
+      "description": "A project focused on promoting responsible consumption and sustainability. This is a UX/UI design project of my own, covering the entire process from market research to logo creation.",
+      "image": "/assets/projects/yanouso.jpg",
+      "link": "https://www.figma.com",
+      "featured": true,
+      "technologies": [
+        { "name": "simple-icons:figma", "iconColor": "#F24E1E" }
+      ]
+    },
+    {
+      "title": "MultiBrand Car Finder",
+      "description": "Explore a vast selection of cars from different manufacturers, filterable by brand, year, doors, price, and more.",
+      "image": "/assets/projects/multibrand-car-finder.jpg",
+      "link": "https://car-finder-p.netlify.app",
+      "featured": false,
+      "technologies": [
+        { "name": "simple-icons:html5", "iconColor": "#E34F26" },
+        { "name": "simple-icons:css3", "iconColor": "#1572B6" },
+        { "name": "simple-icons:javascript", "iconColor": "#F7DF1E" }
+      ]
+    },
+    {
+      "title": "MailSender Pro",
+      "description": "Simplify email sending with this efficient mail delivery service designed to streamline your communication.",
+      "image": "/assets/projects/mailsender-pro.jpg",
+      "link": "https://enviar-mails.netlify.app",
+      "featured": false,
+      "technologies": [
+        { "name": "simple-icons:html5", "iconColor": "#E34F26" },
+        { "name": "simple-icons:tailwindcss", "iconColor": "#06B6D4" },
+        { "name": "simple-icons:javascript", "iconColor": "#F7DF1E" }
+      ]
+    },
+    {
+      "title": "Coinbase Clone",
+      "description": "Experience the world of cryptocurrency trading with a platform that mirrors the functionality of Coinbase.",
+      "image": "/assets/projects/coinbase-clone.jpg",
+      "link": "https://coinbase-clone-le.netlify.app",
+      "featured": false,
+      "technologies": [
+        { "name": "simple-icons:html5", "iconColor": "#E34F26" },
+        { "name": "simple-icons:css3", "iconColor": "#1572B6" },
+        { "name": "simple-icons:sass", "iconColor": "#CC6699" }
+      ]
+    },
+    {
+      "title": "Startup Landing",
+      "description": "A minimalist webpage designed to introduce your startup to the world and make a lasting impression.",
+      "image": "/assets/projects/startup-landing.jpg",
+      "link": "https://startup-page-le.netlify.app",
+      "featured": false,
+      "technologies": [
+        { "name": "simple-icons:html5", "iconColor": "#E34F26" },
+        { "name": "simple-icons:css3", "iconColor": "#1572B6" },
+        { "name": "simple-icons:sass", "iconColor": "#CC6699" },
+        { "name": "simple-icons:javascript", "iconColor": "#F7DF1E" },
+        { "name": "simple-icons:bootstrap", "iconColor": "#7952B3" }
+      ]
+    },
+    {
+      "title": "Parallax Café",
+      "description": "A visually stunning webpage for a cafe, complete with parallax scrolling effects to captivate visitors.",
+      "image": "/assets/projects/parallax-cafe.jpg",
+      "link": "https://restaurant-parallax.netlify.app",
+      "featured": false,
+      "technologies": [
+        { "name": "simple-icons:html5", "iconColor": "#E34F26" },
+        { "name": "simple-icons:css3", "iconColor": "#1572B6" },
+        { "name": "simple-icons:javascript", "iconColor": "#F7DF1E" }
+      ]
+    }
+  ]
+}
