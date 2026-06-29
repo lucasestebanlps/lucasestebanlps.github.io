@@ -3,11 +3,11 @@
     {
       "title": "EventzWay",
       "description": {
-        "en": "A full-featured event platform built end-to-end by me with Flutter & Dart and powered by Firebase, packed with a wide range of features. Live on the web, Google Play and the App Store.",
-        "es": "Una plataforma de eventos completa, desarrollada de punta a punta por mí con Flutter y Dart sobre Firebase, con un montón de funcionalidades. Disponible en la web, Google Play y la App Store."
+        "en": "A full-featured event platform built end-to-end by me with Flutter & Dart and powered by Firebase, packed with a wide range of features. Available on Google Play and the App Store.",
+        "es": "Una plataforma de eventos completa, desarrollada de punta a punta por mí con Flutter y Dart sobre Firebase, con un montón de funcionalidades. Disponible en Google Play y la App Store."
       },
       "image": "/assets/projects/eventz.webp",
-      "link": "https://eventzway.it/",
+      "link": "",
       "playStore": "https://play.google.com/store/apps/details?id=com.eventzsrl.eventz",
       "appStore": "https://apps.apple.com/it/app/eventzway/id6743239839",
       "featured": true,
