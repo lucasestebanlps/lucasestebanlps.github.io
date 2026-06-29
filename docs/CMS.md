@@ -68,9 +68,15 @@ git push
 El push dispara el deploy automático (ver sección 3).
 
 > ⚠️ **Optimizá las imágenes nuevas.** Decap sube el archivo original sin comprimir.
-> Después de agregar una imagen pesada, convertila a WebP pasándola al script:
+> Después de agregar una imagen, pasala por el script: la convierte a WebP y la
+> deja en el **tamaño exacto de tarjeta (1000×650)**, así todas se ven parejas:
 > ```bash
 > npm run optimize:images -- public/assets/projects/mi-imagen.png
+> ```
+> Por defecto recorta al centro. Si el recorte corta algo importante, usá
+> `--contain` (encaja la imagen completa y rellena los costados):
+> ```bash
+> npm run optimize:images -- --contain public/assets/projects/mi-imagen.png
 > ```
 > Genera un `.webp` al lado; revisalo, actualizá el campo de imagen al `.webp`
 > y borrá el original.
