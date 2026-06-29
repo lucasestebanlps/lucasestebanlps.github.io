@@ -1,6 +1,23 @@
 {
   "projects": [
     {
+      "title": "EventzWay",
+      "description": {
+        "en": "A full-featured event platform built end-to-end by me with Flutter & Dart and powered by Firebase, packed with a wide range of features. Live on the web, Google Play and the App Store.",
+        "es": "Una plataforma de eventos completa, desarrollada de punta a punta por mí con Flutter y Dart sobre Firebase, con un montón de funcionalidades. Disponible en la web, Google Play y la App Store."
+      },
+      "image": "/assets/projects/eventz.webp",
+      "link": "https://eventzway.it/",
+      "playStore": "https://play.google.com/store/apps/details?id=com.eventzsrl.eventz",
+      "appStore": "https://apps.apple.com/it/app/eventzway/id6743239839",
+      "featured": true,
+      "technologies": [
+        { "name": "simple-icons:flutter", "iconColor": "#02569B" },
+        { "name": "simple-icons:dart", "iconColor": "#0175C2" },
+        { "name": "simple-icons:firebase", "iconColor": "#FFCA28" }
+      ]
+    },
+    {
       "title": "Applichiamoci",
       "description": {
         "en": "Design and development of Applichiamoci, an app to connect those in need with vital resources. Available on Play Store :)",

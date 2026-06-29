@@ -1,31 +1,33 @@
+// Converts images to optimized WebP (max width 1000px).
+//
+// Usage:
+//   node scripts/optimize-images.mjs <image> [more images...]
+//   npm run optimize:images -- public/assets/projects/my-shot.png
+//
+// Each input produces a sibling `.webp`; the original is left untouched so you
+// can delete it once you've checked the result.
+
 import sharp from 'sharp';
 import { stat } from 'node:fs/promises';
+import path from 'node:path';
 
-const jobs = [
-  // Avatar is a transparent cutout → WebP keeps the alpha channel.
-  { in: 'public/assets/avatar.png', out: 'public/assets/avatar.webp', width: 900, quality: 82 },
-  // Decorative background, no transparency.
-  { in: 'public/assets/bg_experience.png', out: 'public/assets/bg_experience.webp', width: 1467, quality: 72 },
-];
+const inputs = process.argv.slice(2);
 
-// Social preview image (OG/Twitter): JPEG flattened on the theme background,
-// since some scrapers (WhatsApp, etc.) don't render WebP.
-await sharp('public/assets/avatar.png')
-  .resize({ width: 600, withoutEnlargement: true })
-  .flatten({ background: '#0D0D0D' })
-  .jpeg({ quality: 82 })
-  .toFile('public/assets/avatar-social.jpg');
-console.log('public/assets/avatar-social.jpg created');
+if (inputs.length === 0) {
+  console.log('Usage: node scripts/optimize-images.mjs <image> [more images...]');
+  process.exit(0);
+}
 
 const kb = (n) => `${(n / 1024).toFixed(0)} KB`;
 
-for (const job of jobs) {
-  const before = (await stat(job.in)).size;
-  await sharp(job.in)
-    .resize({ width: job.width, withoutEnlargement: true })
-    .webp({ quality: job.quality })
-    .toFile(job.out);
-  const after = (await stat(job.out)).size;
+for (const input of inputs) {
+  const out = path.join(path.dirname(input), `${path.basename(input, path.extname(input))}.webp`);
+  const before = (await stat(input)).size;
+  await sharp(input)
+    .resize({ width: 1000, withoutEnlargement: true })
+    .webp({ quality: 80 })
+    .toFile(out);
+  const after = (await stat(out)).size;
   const saved = (100 * (1 - after / before)).toFixed(0);
-  console.log(`${job.out}  ${kb(before)} → ${kb(after)}  (-${saved}%)`);
+  console.log(`${out}  ${kb(before)} → ${kb(after)}  (-${saved}%)`);
 }
