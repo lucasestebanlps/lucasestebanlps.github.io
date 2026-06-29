@@ -45,6 +45,7 @@ collections:
               - { name: 'playStore', label: 'Google Play URL', widget: 'string', required: false, hint: 'Only for Android apps.' }
               - { name: 'appStore', label: 'App Store URL', widget: 'string', required: false, hint: 'Only for iOS apps.' }
               - { name: 'featured', label: 'Featured (shown first)', widget: 'boolean', default: false }
+              - { name: 'comingSoon', label: 'Coming soon (shows a badge)', widget: 'boolean', default: false, required: false }
               - name: 'technologies'
                 label: 'Technologies'
                 label_singular: 'Technology'

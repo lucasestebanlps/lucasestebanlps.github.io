@@ -44,6 +44,8 @@ Abrí **http://localhost:5173/admin/**
    - **Google Play URL** — solo para apps Android (muestra el botón de Play Store).
    - **App Store URL** — solo para apps iOS (muestra el botón de App Store).
    - **Featured** — si está activo, el proyecto aparece **primero**.
+   - **Coming soon** — muestra un badge "Próximamente / Coming soon" sobre la
+     imagen (ideal para un proyecto en desarrollo, con o sin links todavía).
 
    > Podés combinar los tres links: si una app tiene web + Play Store + App Store,
    > la tarjeta muestra los tres botones. Si dejás un campo vacío, ese botón no aparece.

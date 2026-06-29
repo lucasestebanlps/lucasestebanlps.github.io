@@ -69,9 +69,7 @@
         "es": "Diseño y desarrollo de Applichiamoci, una app para conectar a quienes lo necesitan con recursos vitales. Disponible en Play Store :)"
       },
       "image": "/assets/projects/applichiamoci.png",
-      "link": "",
-      "playStore": "https://play.google.com/store/apps/details?id=com.fonzadione_emmanuel.applichiamoc",
-      "appStore": "",
+      "link": "https://fondazione-emmanuel.org/progetti-nazionali/applichiamoci/",
       "featured": true,
       "technologies": [
         { "name": "simple-icons:flutter", "iconColor": "#02569B" },
@@ -131,7 +129,7 @@
       },
       "image": "/assets/projects/yanouso.jpg",
       "link": "https://www.figma.com",
-      "featured": true,
+      "featured": false,
       "technologies": [
         { "name": "simple-icons:figma", "iconColor": "#F24E1E" }
       ]

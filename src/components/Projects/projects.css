@@ -121,6 +121,23 @@
     flex-shrink: 0;
 }
 
+.project__badge {
+    position: absolute;
+    top: var(--spacing-8);
+    right: var(--spacing-8);
+    z-index: 11;
+    padding: 0.35rem 0.8rem;
+    font-family: var(--font-primary);
+    font-size: var(--font-xsmall);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-background);
+    background-color: var(--color-accent);
+    border-radius: 9999px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
 .icon {
     display: flex;
     color: var(--color-accent);

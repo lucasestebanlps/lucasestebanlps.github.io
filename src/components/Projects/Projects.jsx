@@ -95,6 +95,9 @@ export default function Projects() {
                     >
                         <div className='overlay'>
                             <img className='overlay__img' src={project.image} alt={`Mockup of ${project.title} project`} loading='lazy' />
+                            {project.comingSoon && (
+                                <span className='project__badge'>{t.projects.comingSoon}</span>
+                            )}
                             <h3 className='overlay__title'>{project.title}</h3>
                             <div className="overlay__span">
                                 <div className='overlay__group'>
