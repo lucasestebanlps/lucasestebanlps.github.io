@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from '../../../Hooks/useForm.js';
 import { motion } from 'framer-motion';
-import { fadeIn } from '../../Assets/variants';
+import { fadeIn } from '../../../variants';
 import Spinner from '../../Spinner/Spinner.jsx';
 import './contact-form.css';
 

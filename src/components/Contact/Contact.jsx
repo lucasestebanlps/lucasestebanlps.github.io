@@ -29,7 +29,7 @@ export default function Contact() {
         </h2>
         <h4
           className='footer__texts-description'>
-          Let's work <br /> together!
+          Let&apos;s work <br /> together!
         </h4>
       </motion.article>
       <ContactForm />

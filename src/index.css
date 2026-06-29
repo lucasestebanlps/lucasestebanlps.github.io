@@ -14,6 +14,7 @@
   --font-primary: 'Orbitron', sans-serif;
   --font-secondary: 'Rajdhani', sans-serif;
   --font-tertiary: 'Aldrich', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
 
   /* Font-Size */
   --font-display: 6.25rem;
@@ -26,11 +27,13 @@
   --font-xsmall: 0.8rem;
 
   /* Color */
-  --color-primary: rgb(159, 88, 252);
+  --color-primary: rgb(177, 120, 255);
   --color-secondary: #F2F2F2;
+  --color-muted: #B8B8C4;
   --color-accent: #EAF205;
   --color-shadow: rgba(111, 115, 2, 0.327);
   --color-background: #0D0D0D;
+  --color-focus: #8AB4FF;
 
   /* Spacings */
   --spacing-128: 12.8rem;
@@ -80,13 +83,38 @@ body {
 
 body {
   background: linear-gradient(270deg, #0d0d0d 25%, #090137 50%, #000000 75%);
-  background-size: 1000% 600%;
-  animation: gradientBackground 15s cubic-bezier(0.7, 0.0, 0.7, 0) 2s infinite;
-  font-family: var(--font-secondary);
+  background-size: 300% 300%;
+  animation: gradientBackground 40s ease-in-out infinite;
+  font-family: var(--font-body);
   font-size: 1.125rem;
-  line-height: 1.5rem;
+  line-height: 1.6;
   color: var(--color-secondary);
   position: relative;
+}
+
+/* Foco visible y coherente para navegación por teclado */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Respeta a quienes prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  body {
+    animation: none;
+    background-position: 50% 50%;
+  }
 }
 
 /* Círculo izquierdo 
@@ -149,6 +177,15 @@ a {
   font-weight: 600;
   font-size: 1.625rem;
   line-height: 2.875rem;
+}
+
+.section__subtitle {
+  font-family: var(--font-body);
+  font-size: var(--font-small);
+  line-height: 1.6;
+  color: var(--color-muted);
+  max-width: 38rem;
+  margin-top: var(--spacing-8);
 }
 
 .text-gradient {

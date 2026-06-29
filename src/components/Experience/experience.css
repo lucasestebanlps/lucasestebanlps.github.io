@@ -4,7 +4,7 @@
     justify-content: center;
     min-height: 100vh;
     margin-top: var(--spacing-68);
-    background-image: url(/assets/bg_experience.png);
+    background-image: url(/assets/bg_experience.webp);
     background-repeat: no-repeat;
     background-size: cover;
     mix-blend-mode: lighten;
@@ -25,9 +25,15 @@
 
 .text__container--title {
     text-align: center;
-    font-family: "Liberty", sans-serif;
+    font-family: var(--font-primary);
     font-size: 4rem;
     color: var(--color-primary);
+}
+
+.about-me__subtitle {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .about-me__container {
@@ -53,7 +59,7 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 20px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .experience__container.left {
@@ -65,8 +71,9 @@
 }
 
 .experience__container:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
 }
 
 .experience__container-header {
@@ -96,37 +103,21 @@
     color: #fff;
     border-radius: 50%;
     cursor: pointer;
-    transition: transform 0.2s ease;
-    animation: pulse 1.5s infinite ease-in-out;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.experience__container-header--button:hover {
-    transform: scale(1.1);
-}
-
-/* Animación "pulse" */
-@keyframes pulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        /* Sombra sutil en el estado normal */
-    }
-
-    50% {
-        transform: scale(1.15);
-        /* Aumenta el tamaño ligeramente */
-        box-shadow: 0 0 10px var(--color-primary), 0 0 20px var(--color-primary);
-        /* Sombra más brillante en el "pulse" */
-    }
+.experience__container-header--button:hover,
+.experience__container-header--button:focus-visible {
+    transform: scale(1.08);
+    box-shadow: 0 0 10px var(--color-primary), 0 0 20px var(--color-primary);
 }
 
 .experience__description {
     display: block;
     font-size: var(--font-small);
-    font-family: var(--font-secondary);
-    letter-spacing: 1px;
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.88);
 }
 
 .skills__icons {

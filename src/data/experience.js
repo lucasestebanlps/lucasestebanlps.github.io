@@ -1,0 +1,57 @@
+/**
+ * Experience / About section entries.
+ *
+ * Each item renders as a card. Optional `link` adds a button (e.g. to the
+ * certifications page) and optional `skills` renders a row of tech icons.
+ *
+ * @typedef {Object} Skill
+ * @property {string} name       Iconify name, e.g. "simple-icons:react".
+ * @property {string} iconColor  Brand hex color.
+ *
+ * @typedef {Object} Experience
+ * @property {string}  name
+ * @property {string}  description
+ * @property {string} [link]     Internal route, e.g. "/certifications".
+ * @property {Skill[]} [skills]
+ */
+
+/** @type {Experience[]} */
+export const experiences = [
+  {
+    name: 'Flutter Developer',
+    description:
+      'Experienced in building production-ready mobile apps using Flutter and Firebase, such as Applichiamoci and Eventz. Skilled in scalable architecture, geolocation, push notifications, and custom UI.',
+  },
+  {
+    name: 'UI/UX Designer',
+    description:
+      'Focused on crafting intuitive, user-centered interfaces that merge aesthetics with usability.',
+  },
+  {
+    name: 'Sales Expert',
+    description:
+      'Over 5 years of experience in customer service and sales. Strong communication and goal-oriented mindset, which I bring into technical and collaborative projects.',
+  },
+  {
+    name: 'Studies',
+    description:
+      'Background in Communication Design with additional development courses. Currently preparing for Computer Science studies in Copenhagen.',
+    link: '/certifications',
+  },
+  {
+    name: 'Skills',
+    description: 'Proficient in a variety of tools and technologies:',
+    skills: [
+      { name: 'simple-icons:flutter', iconColor: '#02569B' },
+      { name: 'simple-icons:firebase', iconColor: '#FFCA28' },
+      { name: 'simple-icons:javascript', iconColor: '#F7DF1E' },
+      { name: 'simple-icons:react', iconColor: '#61DAFB' },
+      { name: 'simple-icons:figma', iconColor: '#F24E1E' },
+      { name: 'simple-icons:tailwindcss', iconColor: '#06B6D4' },
+      { name: 'simple-icons:html5', iconColor: '#E34F26' },
+      { name: 'simple-icons:css3', iconColor: '#1572B6' },
+      { name: 'simple-icons:sass', iconColor: '#CC6699' },
+      { name: 'simple-icons:github', iconColor: '#ffffff' },
+    ],
+  },
+];

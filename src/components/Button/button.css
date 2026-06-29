@@ -11,19 +11,22 @@
     backdrop-filter: blur(10px);
     text-transform: uppercase;
     background-color: transparent;
-    transition: 0.3s ease all;
+    transition: color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
     border: 1px solid var(--color-accent);
-    box-shadow: 0px 4.42184px 40.23px var(--color-shadow);
-    animation: pulse 1.5s infinite ease-in-out;
-    /* Pulse animation added */
+    box-shadow: 0 0 0 transparent;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus-visible {
     color: var(--color-background);
     background-color: var(--color-accent);
     border: 1px solid var(--color-accent);
-    transform: scale(1.05);
-    /* Slight zoom on hover */
+    box-shadow: 0 0 12px var(--color-accent), 0 0 28px var(--color-shadow);
+    /* Glow on interaction instead of a constant pulse */
+}
+
+.btn:active {
+    transform: scale(0.97);
 }
 
 .btn-sm {
@@ -67,23 +70,6 @@
 .btn-disabled:hover {
     background-color: grey;
     border: transparent;
+    box-shadow: none;
     cursor: not-allowed;
-}
-
-/* Pulse Animation */
-@keyframes pulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        /* Subtle shadow in normal state */
-    }
-
-    50% {
-        transform: scale(1.15);
-        /* Slightly larger */
-        box-shadow: 0 0 10px var(--color-primary), 0 0 20px var(--color-primary);
-        /* Brighter glow in pulse */
-    }
 }

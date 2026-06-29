@@ -1,24 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Icon } from '@iconify/react';
 import { BsFillPlayFill } from 'react-icons/bs';
 
 import Button from '../Button/Button';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
+import { projects as projectsData } from '../../data/projects';
 import './projects.css';
 import '../Assets/Icons/icons.css'
 
+// Featured projects first, keeping the original order within each group.
+const projects = [...projectsData].sort((a, b) => Number(b.featured) - Number(a.featured));
 
 export default function Projects() {
-    const [projects, setProjects] = useState([]);
     const [projectsToShow, setProjectsToShow] = useState(4);
-    const [allProjectsLoaded, setAllProjectsLoaded] = useState(false);
-
-    useEffect(() => {
-        fetch('/data/projects.json')
-            .then((response) => response.json())
-            .then((data) => setProjects(data));
-    }, []);
+    const allProjectsLoaded = projectsToShow >= projects.length;
 
     // Mapeo dinámico de íconos basado en el nombre
     const renderTechnologyIcons = (techs) => {
@@ -33,24 +29,23 @@ export default function Projects() {
     };
 
     const loadMoreProjects = () => {
-        const newProjectsToShow = projectsToShow + 2;
-        if (newProjectsToShow >= projects.length) {
-            setAllProjectsLoaded(true);
-        }
-        setProjectsToShow(newProjectsToShow);
+        setProjectsToShow((current) => current + 2);
     };
 
     return (
         <section className='projects container' id="projects">
-            <motion.h2
+            <motion.div
                 variants={fadeIn('up', 0.3)}
                 initial='hidden'
                 whileInView={'show'}
                 viewport={{ once: true, amount: 0 }}
-                className='projects__title h2'
+                className='projects__header'
             >
-                Projects
-            </motion.h2>
+                <h2 className='projects__title h2'>Projects</h2>
+                <p className='section__subtitle'>
+                    A selection of things I&apos;ve built — from client work to personal experiments.
+                </p>
+            </motion.div>
 
             <div className='projects__grid'>
                 {projects.slice(0, projectsToShow).map((project) => (
@@ -63,7 +58,7 @@ export default function Projects() {
                         viewport={{ once: true, amount: 0 }}
                     >
                         <div className='overlay'>
-                            <img className='overlay__img' src={project.image} alt={`Mockup of ${project.title} project`} />
+                            <img className='overlay__img' src={project.image} alt={`Mockup of ${project.title} project`} loading='lazy' />
                             <h3 className='overlay__title'>{project.title}</h3>
                             <div className="overlay__span">
                                 <div className='overlay__group'>
@@ -74,7 +69,8 @@ export default function Projects() {
                                     </div>
                                     <Button
                                         className='icon'
-                                        label={<BsFillPlayFill />}
+                                        label={<BsFillPlayFill aria-hidden="true" />}
+                                        ariaLabel={`Open ${project.title} demo`}
                                         url={project.link}
                                     />
                                 </div>

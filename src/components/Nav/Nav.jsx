@@ -6,7 +6,7 @@ import './nav.css'
 
 export default function Nav() {
     return (
-        <nav className='nav-bottom'>
+        <nav className='nav-bottom' aria-label='Section navigation'>
             <ul className='shadow-bottom'>
                 <li className="nav-list__item">
                     <Link
@@ -17,8 +17,11 @@ export default function Nav() {
                         offset={-400}
                         duration={600}
                         className="nav-list__link"
+                        tabIndex={0}
+                        role="link"
+                        aria-label="Go to home"
                     >
-                        <FiHome />
+                        <FiHome aria-hidden="true" />
                     </Link>
                 </li>
                 <li className="nav-list__item">
@@ -29,8 +32,11 @@ export default function Nav() {
                         spy={true}
                         duration={600}
                         className="nav-list__link"
+                        tabIndex={0}
+                        role="link"
+                        aria-label="Go to projects"
                     >
-                        <BsBriefcase />
+                        <BsBriefcase aria-hidden="true" />
                     </Link>
                 </li>
                 <li className="nav-list__item">
@@ -41,8 +47,11 @@ export default function Nav() {
                         spy={true}
                         duration={600}
                         className="nav-list__link"
+                        tabIndex={0}
+                        role="link"
+                        aria-label="Go to about me"
                     >
-                        <BsBook />
+                        <BsBook aria-hidden="true" />
                     </Link>
                 </li>
                 <li className="nav-list__item">
@@ -53,8 +62,11 @@ export default function Nav() {
                         spy={true}
                         duration={600}
                         className="nav-list__link"
+                        tabIndex={0}
+                        role="link"
+                        aria-label="Go to contact"
                     >
-                        <BsChatSquare />
+                        <BsChatSquare aria-hidden="true" />
                     </Link>
                 </li>
             </ul>

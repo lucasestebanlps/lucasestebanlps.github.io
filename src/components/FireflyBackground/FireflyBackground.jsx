@@ -3,8 +3,14 @@ import './FireflyBackground.css';
 
 const FireflyBackground = () => {
     useEffect(() => {
+        // Respeta la preferencia de movimiento reducido: sin luciérnagas animadas.
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            return;
+        }
+
         const container = document.querySelector('.firefly-container');
-        const fireflyCount = 15;
+        if (!container) return;
+        const fireflyCount = 12;
 
         for (let i = 0; i < fireflyCount; i++) {
             const firefly = document.createElement('div');

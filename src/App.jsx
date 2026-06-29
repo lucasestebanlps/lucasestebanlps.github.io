@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Contact from './components/Contact/Contact';
 import Experience from './components/Experience/Experience';
 import Header from './components/Header/Header';
 import Nav from './components/Nav/Nav';
 import Projects from './components/Projects/Projects';
-import { Route, Routes } from 'react-router-dom';
-import CertificationsPage from './pages/CertificationsPage';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import ScrollToTop from './Helpers/ScrollToTop';
 import FireflyBackground from "./components/FireflyBackground/FireflyBackground";
+import Spinner from './components/Spinner/Spinner';
+
+// Code-split the certifications page so it doesn't load with the home page.
+const CertificationsPage = lazy(() => import('./pages/CertificationsPage'));
+
 function MainPageContent() {
   return (
     <>
@@ -25,10 +29,13 @@ function App() {
     <>
       <FireflyBackground /> {/* Fondo de luciérnagas */}
       <ScrollToTop />
-      <Routes>
-        <Route path='/' element={<MainPageContent />} />
-        <Route path='/certifications' element={<CertificationsPage />} />
-      </Routes>
+      <Suspense fallback={<Spinner />}>
+        <Routes>
+          <Route path='/' element={<MainPageContent />} />
+          <Route path='/certifications' element={<CertificationsPage />} />
+          <Route path='*' element={<Navigate to='/' replace />} />
+        </Routes>
+      </Suspense>
     </>
   );
 }

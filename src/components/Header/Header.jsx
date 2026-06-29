@@ -1,9 +1,8 @@
 import React from 'react'
 
 // assets
-import Image from '/assets/avatar.png'
+import Image from '/assets/avatar.webp'
 import SocialMedia from '../Social-media/SocialMedia'
-import Button from '../Button/Button'
 
 // motion
 import { motion } from 'framer-motion'
@@ -11,10 +10,10 @@ import { motion } from 'framer-motion'
 import { fadeIn } from '../../variants.js';
 // type animation
 import { TypeAnimation } from 'react-type-animation'
+// scroll
+import { Link as ScrollLink } from 'react-scroll'
 // css
 import './header.css'
-
-const cvFileName = '/assets/cv-italiano.pdf'
 
 
 export default function Header() {
@@ -26,6 +25,10 @@ export default function Header() {
                 whileInView={'show'}
                 viewport={{ once: true, amount: 0 }}
                 className='text'>
+                <span className='text__eyebrow'>
+                    <span className='text__eyebrow-dot' aria-hidden='true'></span>
+                    Available for new projects
+                </span>
                 <h1
                     className='text__h1'>LUCAS ESTEBAN
                 </h1>
@@ -45,10 +48,31 @@ export default function Header() {
                     />
                 </div>
                 <p className='text__description'>
-                    Welcome to my digital world! My approach goes beyond writing code; it's about bringing innovative ideas and solutions to life that positively impact people.
+                    Welcome to my digital world! My approach goes beyond writing code; it&apos;s about bringing innovative ideas and solutions to life that positively impact people.
                 </p>
+                <div className='header__cta'>
+                    <ScrollLink
+                        to='projects'
+                        smooth={true}
+                        duration={600}
+                        className='btn btn-lg header__cta-primary'
+                        tabIndex={0}
+                        role='button'
+                    >
+                        View my work
+                    </ScrollLink>
+                    <ScrollLink
+                        to='contact'
+                        smooth={true}
+                        duration={600}
+                        className='header__cta-secondary'
+                        tabIndex={0}
+                        role='button'
+                    >
+                        Get in touch
+                    </ScrollLink>
+                </div>
                 <div className='buttons'>
-
                     <SocialMedia className='buttons__socials' />
                 </div>
             </motion.article>

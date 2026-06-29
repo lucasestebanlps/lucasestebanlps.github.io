@@ -1,21 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
 import { Link as RouterLink } from 'react-router-dom';
 import { GiGraduateCap } from 'react-icons/gi';
 import './experience.css';
-import { fadeIn } from '../Assets/variants';
+import { fadeIn } from '../../variants';
+import { experiences as experienceData } from '../../data/experience';
 import '../Assets/Icons/icons.css';
 
 export default function Experience() {
-    const [experienceData, setExperienceData] = useState([]);
-
-    useEffect(() => {
-        fetch('/data/experience.json')
-            .then((response) => response.json())
-            .then((data) => setExperienceData(data.experiences));
-    }, []);
-
     const renderSkillsIcons = (skills) => {
         return skills?.map((skill, index) => (
             <Icon
@@ -38,6 +31,9 @@ export default function Experience() {
                 >
                     <div className="text__container">
                         <h2 className="h2 text__container--title">About me</h2>
+                        <p className="section__subtitle about-me__subtitle">
+                            My journey, experience and the tools I work with.
+                        </p>
                     </div>
                 </motion.article>
 
@@ -56,9 +52,9 @@ export default function Experience() {
 
                         >
                             <div className="experience__container-header">
-                                <h4 className="experience__container-header--title">
+                                <h3 className="experience__container-header--title">
                                     {experience.name}
-                                </h4>
+                                </h3>
                                 {experience.link && (
                                     <RouterLink
                                         to={experience.link}

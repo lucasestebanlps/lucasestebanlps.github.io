@@ -1,43 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { BiArrowBack } from 'react-icons/bi';
 import { motion } from 'framer-motion';
 import SocialMedia from '../components/Social-media/SocialMedia';
-import { fadeIn } from '../components/Assets/variants';
+import { fadeIn } from '../variants';
+import { certifications } from '../data/certifications';
 import './certifications-page.css';
 
 export default function CertificationsPage() {
-  const [certifications, setCertifications] = useState([]);
-
+  // Aplicar el efecto tilt a las tarjetas de certificados
   useEffect(() => {
-    // Cargar los datos desde el archivo JSON
-    fetch('/data/certifications.json')
-      .then(response => response.json())
-      .then(data => setCertifications(data.certifications));
-  }, []);
+    const tiltElements = document.querySelectorAll('.tilt-effect');
 
-  // Aplicar el efecto tilt después de que los certificados se hayan cargado
-  useEffect(() => {
-    if (certifications.length > 0) {
-      const tiltElements = document.querySelectorAll('.tilt-effect');
+    tiltElements.forEach((element) => {
+      element.addEventListener('mousemove', handleMove);
+      element.addEventListener('mouseleave', handleMouseOut);
+      element.addEventListener('mousedown', handleMouseDown);
+      element.addEventListener('mouseup', handleMouseUp);
+    });
 
+    return () => {
       tiltElements.forEach((element) => {
-        element.addEventListener('mousemove', handleMove);
-        element.addEventListener('mouseleave', handleMouseOut);
-        element.addEventListener('mousedown', handleMouseDown);
-        element.addEventListener('mouseup', handleMouseUp);
+        element.removeEventListener('mousemove', handleMove);
+        element.removeEventListener('mouseleave', handleMouseOut);
+        element.removeEventListener('mousedown', handleMouseDown);
+        element.removeEventListener('mouseup', handleMouseUp);
       });
-
-      return () => {
-        tiltElements.forEach((element) => {
-          element.removeEventListener('mousemove', handleMove);
-          element.removeEventListener('mouseleave', handleMouseOut);
-          element.removeEventListener('mousedown', handleMouseDown);
-          element.removeEventListener('mouseup', handleMouseUp);
-        });
-      };
-    }
-  }, [certifications]); // Este useEffect se dispara cuando las certificaciones se cargan
+    };
+  }, []);
 
   function handleMove(e) {
     const el = e.currentTarget;
@@ -91,7 +81,7 @@ export default function CertificationsPage() {
           whileInView={"show"}
           viewport={{ once: true }}
           className='certifications__description'>
-          As you explore my certificates, please keep in mind that they represent just a portion of my dedication to this field. I'm excited to share my knowledge, collaborate on innovative projects, and continue evolving as a developer.
+          As you explore my certificates, please keep in mind that they represent just a portion of my dedication to this field. I&apos;m excited to share my knowledge, collaborate on innovative projects, and continue evolving as a developer.
         </motion.p>
         <article className="certifications__grid">
           {certifications.map((certification, index) => {
