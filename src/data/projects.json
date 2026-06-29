@@ -18,6 +18,51 @@
       ]
     },
     {
+      "title": "Web Design Service",
+      "description": {
+        "en": "The landing page for my freelance web service, where I sell custom-built websites (never templates) for entrepreneurs, with Starter, Professional and Premium plans. Designed and coded from scratch with HTML, CSS and JavaScript.",
+        "es": "La landing de mi servicio freelance de desarrollo web, donde vendo sitios hechos a medida (nunca plantillas) para emprendedores, con planes Inicial, Profesional y Premium. Diseñada y programada desde cero con HTML, CSS y JavaScript."
+      },
+      "image": "/assets/projects/business.webp",
+      "link": "https://my-website-azure-phi.vercel.app/",
+      "featured": false,
+      "technologies": [
+        { "name": "simple-icons:html5", "iconColor": "#E34F26" },
+        { "name": "simple-icons:css3", "iconColor": "#1572B6" },
+        { "name": "simple-icons:javascript", "iconColor": "#F7DF1E" }
+      ]
+    },
+    {
+      "title": "Pampa Almacén",
+      "description": {
+        "en": "A demo storefront for an Argentine deli & butcher shop, built to show how a client's site looks and grows across my Starter, Professional and Premium plans. Multilingual and mobile-first, made with HTML, CSS and JavaScript.",
+        "es": "Una tienda demo para un almacén y carnicería argentina, creada para mostrar cómo se ve y evoluciona el sitio de un cliente entre mis planes Inicial, Profesional y Premium. Multiidioma y mobile-first, hecha con HTML, CSS y JavaScript."
+      },
+      "image": "/assets/projects/pampa.webp",
+      "link": "https://pampa-almacen.vercel.app/",
+      "featured": false,
+      "technologies": [
+        { "name": "simple-icons:html5", "iconColor": "#E34F26" },
+        { "name": "simple-icons:css3", "iconColor": "#1572B6" },
+        { "name": "simple-icons:javascript", "iconColor": "#F7DF1E" }
+      ]
+    },
+    {
+      "title": "Møller Bakeri",
+      "description": {
+        "en": "A demo site for an artisan bakery with a no-app ordering flow (build your order → pay with MobilePay → confirm on WhatsApp). Another example of my web plans in action — Starter, Professional and Premium. Built with HTML, CSS and JavaScript.",
+        "es": "Un sitio demo para una panadería artesanal con un flujo de pedido sin app (armás tu pedido → pagás con MobilePay → confirmás por WhatsApp). Otro ejemplo de mis planes web en acción — Inicial, Profesional y Premium. Hecho con HTML, CSS y JavaScript."
+      },
+      "image": "/assets/projects/bakery.webp",
+      "link": "https://moller-bakeri.vercel.app/",
+      "featured": false,
+      "technologies": [
+        { "name": "simple-icons:html5", "iconColor": "#E34F26" },
+        { "name": "simple-icons:css3", "iconColor": "#1572B6" },
+        { "name": "simple-icons:javascript", "iconColor": "#F7DF1E" }
+      ]
+    },
+    {
       "title": "Applichiamoci",
       "description": {
         "en": "Design and development of Applichiamoci, an app to connect those in need with vital resources. Available on Play Store :)",
