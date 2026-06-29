@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Icon } from '@iconify/react';
 import { BsFillPlayFill } from 'react-icons/bs';
+import { FaGooglePlay, FaAppStore } from 'react-icons/fa';
 
 import Button from '../Button/Button';
 import { motion } from 'framer-motion';
@@ -11,6 +12,39 @@ import '../Assets/Icons/icons.css'
 
 // Featured projects first, keeping the original order within each group.
 const projects = [...projectsData].sort((a, b) => Number(b.featured) - Number(a.featured));
+
+// Builds the list of available links for a project (web demo + app stores).
+const getProjectLinks = (project) => {
+    const links = [];
+    if (project.link) {
+        links.push({
+            key: 'demo',
+            url: project.link,
+            icon: <BsFillPlayFill aria-hidden="true" />,
+            text: 'View Demo',
+            label: `Open ${project.title} demo`,
+        });
+    }
+    if (project.playStore) {
+        links.push({
+            key: 'play',
+            url: project.playStore,
+            icon: <FaGooglePlay aria-hidden="true" />,
+            text: 'Google Play',
+            label: `Get ${project.title} on Google Play`,
+        });
+    }
+    if (project.appStore) {
+        links.push({
+            key: 'appstore',
+            url: project.appStore,
+            icon: <FaAppStore aria-hidden="true" />,
+            text: 'App Store',
+            label: `Get ${project.title} on the App Store`,
+        });
+    }
+    return links;
+};
 
 export default function Projects() {
     const [projectsToShow, setProjectsToShow] = useState(4);
@@ -67,21 +101,31 @@ export default function Projects() {
                                         <span className='overlay__span-description'>{project.description}</span>
                                         <span className='technologies'>{renderTechnologyIcons(project.technologies)}</span>
                                     </div>
-                                    <Button
-                                        className='icon'
-                                        label={<BsFillPlayFill aria-hidden="true" />}
-                                        ariaLabel={`Open ${project.title} demo`}
-                                        url={project.link}
-                                    />
+                                    <div className='project__links'>
+                                        {getProjectLinks(project).map((link) => (
+                                            <Button
+                                                key={link.key}
+                                                className='icon'
+                                                label={link.icon}
+                                                ariaLabel={link.label}
+                                                url={link.url}
+                                            />
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <div className="project__button--responsive">
-                            <Button
-                                label='View Demo'
-                                className='button__modal'
-                                url={project.link} />
+                            {getProjectLinks(project).map((link) => (
+                                <Button
+                                    key={link.key}
+                                    label={link.text}
+                                    className='button__modal'
+                                    ariaLabel={link.label}
+                                    url={link.url}
+                                />
+                            ))}
                         </div>
                     </motion.article>
                 ))}

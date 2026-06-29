@@ -36,7 +36,9 @@ collections:
               - { name: 'title', label: 'Title', widget: 'string' }
               - { name: 'description', label: 'Description', widget: 'text' }
               - { name: 'image', label: 'Screenshot', widget: 'image' }
-              - { name: 'link', label: 'Demo / store URL', widget: 'string' }
+              - { name: 'link', label: 'Web demo URL', widget: 'string', required: false, hint: 'Live website / demo. Leave empty for mobile-only apps.' }
+              - { name: 'playStore', label: 'Google Play URL', widget: 'string', required: false, hint: 'Only for Android apps.' }
+              - { name: 'appStore', label: 'App Store URL', widget: 'string', required: false, hint: 'Only for iOS apps.' }
               - { name: 'featured', label: 'Featured (shown first)', widget: 'boolean', default: false }
               - name: 'technologies'
                 label: 'Technologies'

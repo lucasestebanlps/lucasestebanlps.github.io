@@ -4,7 +4,9 @@
       "title": "Applichiamoci",
       "description": "Design and development of Applichiamoci, an app to connect those in need with vital resources. Available on Play Store :)",
       "image": "/assets/projects/applichiamoci.png",
-      "link": "https://play.google.com/store/apps/details?id=com.fonzadione_emmanuel.applichiamoc",
+      "link": "",
+      "playStore": "https://play.google.com/store/apps/details?id=com.fonzadione_emmanuel.applichiamoc",
+      "appStore": "",
       "featured": true,
       "technologies": [
         { "name": "simple-icons:flutter", "iconColor": "#02569B" },

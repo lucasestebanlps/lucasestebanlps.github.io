@@ -39,8 +39,13 @@ Abrí **http://localhost:5173/admin/**
    - **Title** — nombre del proyecto.
    - **Description** — resumen corto.
    - **Screenshot** — subí la imagen (se guarda en `public/assets/projects/`).
-   - **Demo / store URL** — link al proyecto.
+   - **Web demo URL** — link al sitio/demo web. Dejalo vacío si es una app solo mobile.
+   - **Google Play URL** — solo para apps Android (muestra el botón de Play Store).
+   - **App Store URL** — solo para apps iOS (muestra el botón de App Store).
    - **Featured** — si está activo, el proyecto aparece **primero**.
+
+   > Podés combinar los tres links: si una app tiene web + Play Store + App Store,
+   > la tarjeta muestra los tres botones. Si dejás un campo vacío, ese botón no aparece.
    - **Technologies** — lista de íconos. Por cada uno:
      - **Icon name**: nombre del set `simple-icons`, p. ej. `simple-icons:react`.
        Buscá nombres en https://icones.js.org (filtrá por "Simple Icons").
