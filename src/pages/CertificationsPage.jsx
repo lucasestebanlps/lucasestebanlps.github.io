@@ -5,9 +5,11 @@ import { motion } from 'framer-motion';
 import SocialMedia from '../components/Social-media/SocialMedia';
 import { fadeIn } from '../variants';
 import { certifications } from '../data/certifications';
+import { useLanguage } from '../i18n/LanguageContext';
 import './certifications-page.css';
 
 export default function CertificationsPage() {
+  const { t } = useLanguage();
   // Aplicar el efecto tilt a las tarjetas de certificados
   useEffect(() => {
     const tiltElements = document.querySelectorAll('.tilt-effect');
@@ -60,8 +62,8 @@ export default function CertificationsPage() {
     <>
       <div className='top-menu'>
         <div className='container top-menu__group'>
-          <RouterLink to='/' className='top-menu__group--link'>
-            <BiArrowBack className='top-menu__group--icon' />
+          <RouterLink to='/' className='top-menu__group--link' aria-label={t.certifications.back}>
+            <BiArrowBack className='top-menu__group--icon' aria-hidden='true' />
           </RouterLink>
           <SocialMedia className='buttons__socials' />
         </div>
@@ -73,7 +75,7 @@ export default function CertificationsPage() {
           whileInView={"show"}
           viewport={{ once: true }}
           className='certifications__title h2'>
-          Study
+          {t.certifications.title}
         </motion.h2>
         <motion.p
           variants={fadeIn("up", 0.3)}
@@ -81,7 +83,7 @@ export default function CertificationsPage() {
           whileInView={"show"}
           viewport={{ once: true }}
           className='certifications__description'>
-          As you explore my certificates, please keep in mind that they represent just a portion of my dedication to this field. I&apos;m excited to share my knowledge, collaborate on innovative projects, and continue evolving as a developer.
+          {t.certifications.intro}
         </motion.p>
         <article className="certifications__grid">
           {certifications.map((certification, index) => {

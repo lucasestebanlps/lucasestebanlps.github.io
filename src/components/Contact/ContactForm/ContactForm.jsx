@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useForm } from '../../../Hooks/useForm.js';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../../variants';
+import { useLanguage } from '../../../i18n/LanguageContext';
 import Spinner from '../../Spinner/Spinner.jsx';
 import './contact-form.css';
 
@@ -11,34 +12,35 @@ const initialForm = {
   message: '',
 };
 
-const validationsForm = (form) => {
+const validationsForm = (form, t) => {
   let errors = {};
-  const regexName = /^[A-Za-z\s]+$/;
+  const regexName = /^[A-Za-zÀ-ÿ\s]+$/;
   const regexEmail = /^[\w+.-]+@[\w.-]+\.\w{2,}$/;
   const regexMessage = /^.{1,999}$/;
 
   if (!form.name.trim()) {
-    errors.name = 'The name field is required.';
+    errors.name = t.contact.errors.nameRequired;
   } else if (!regexName.test(form.name.trim())) {
-    errors.name = 'The name field only accepts letters.';
+    errors.name = t.contact.errors.nameLetters;
   }
 
   if (!form.email.trim()) {
-    errors.email = 'The email field is required.';
+    errors.email = t.contact.errors.emailRequired;
   } else if (!regexEmail.test(form.email.trim())) {
-    errors.email = 'Please enter a valid email.';
+    errors.email = t.contact.errors.emailInvalid;
   }
 
   if (!form.message.trim()) {
-    errors.message = 'The message field is required.';
+    errors.message = t.contact.errors.messageRequired;
   } else if (!regexMessage.test(form.message.trim())) {
-    errors.message = 'The message field must not exceed 999 characters.';
+    errors.message = t.contact.errors.messageLength;
   }
 
   return errors;
 };
 
 export default function ContactForm() {
+  const { t } = useLanguage();
   const {
     form,
     errors,
@@ -46,7 +48,7 @@ export default function ContactForm() {
     response,
     handleChange,
     handleSubmit,
-  } = useForm(initialForm, validationsForm);
+  } = useForm(initialForm, (form) => validationsForm(form, t));
 
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
@@ -83,7 +85,7 @@ export default function ContactForm() {
           onChange={handleInputChange}
           required
         />
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">{t.contact.name}</label>
         {errors.name && <p className="message-error">{errors.name}</p>}
       </div>
       <div className="form__group">
@@ -96,7 +98,7 @@ export default function ContactForm() {
           onChange={handleInputChange}
           required
         />
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">{t.contact.email}</label>
         {errors.email && <p className="message-error">{errors.email}</p>}
       </div>
       <div className="form__group group-textarea">
@@ -109,18 +111,18 @@ export default function ContactForm() {
           onChange={handleInputChange}
           required
         ></textarea>
-        <label htmlFor="message">Message</label>
+        <label htmlFor="message">{t.contact.message}</label>
         {errors.message && <p className="message-error">{errors.message}</p>}
       </div>
       <input
         type="submit"
         name="submit"
-        value="Submit"
+        value={t.contact.submit}
         disabled={isButtonDisabled}
         className={isButtonDisabled ? 'btn btn-lg form__group-submit btn-disabled' : 'btn btn-lg form__group-submit'}
       />
       {loading && <Spinner />}
-      {response && <p className="message-success">Sent successfully!</p>}
+      {response && <p className="message-success">{t.contact.success}</p>}
     </motion.form>
   );
 }

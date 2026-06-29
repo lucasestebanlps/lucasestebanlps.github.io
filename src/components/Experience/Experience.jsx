@@ -6,9 +6,12 @@ import { GiGraduateCap } from 'react-icons/gi';
 import './experience.css';
 import { fadeIn } from '../../variants';
 import { experiences as experienceData } from '../../data/experience';
+import { useLanguage, localize } from '../../i18n/LanguageContext';
 import '../Assets/Icons/icons.css';
 
 export default function Experience() {
+    const { t, lang } = useLanguage();
+
     const renderSkillsIcons = (skills) => {
         return skills?.map((skill, index) => (
             <Icon
@@ -30,9 +33,9 @@ export default function Experience() {
                     className="texts"
                 >
                     <div className="text__container">
-                        <h2 className="h2 text__container--title">About me</h2>
+                        <h2 className="h2 text__container--title">{t.about.title}</h2>
                         <p className="section__subtitle about-me__subtitle">
-                            My journey, experience and the tools I work with.
+                            {t.about.subtitle}
                         </p>
                     </div>
                 </motion.article>
@@ -53,7 +56,7 @@ export default function Experience() {
                         >
                             <div className="experience__container-header">
                                 <h3 className="experience__container-header--title">
-                                    {experience.name}
+                                    {localize(experience.name, lang)}
                                 </h3>
                                 {experience.link && (
                                     <RouterLink
@@ -65,7 +68,7 @@ export default function Experience() {
                                 )}
                             </div>
                             <span className="experience__description">
-                                {experience.description}
+                                {localize(experience.description, lang)}
                             </span>
 
                             {experience.skills && (

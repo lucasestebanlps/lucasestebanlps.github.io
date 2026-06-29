@@ -34,7 +34,12 @@ collections:
             summary: '{{fields.title}}'
             fields:
               - { name: 'title', label: 'Title', widget: 'string' }
-              - { name: 'description', label: 'Description', widget: 'text' }
+              - name: 'description'
+                label: 'Description'
+                widget: 'object'
+                fields:
+                  - { name: 'en', label: 'Description (English)', widget: 'text' }
+                  - { name: 'es', label: 'Description (Español)', widget: 'text' }
               - { name: 'image', label: 'Screenshot', widget: 'image' }
               - { name: 'link', label: 'Web demo URL', widget: 'string', required: false, hint: 'Live website / demo. Leave empty for mobile-only apps.' }
               - { name: 'playStore', label: 'Google Play URL', widget: 'string', required: false, hint: 'Only for Android apps.' }

@@ -37,7 +37,8 @@ Abrí **http://localhost:5173/admin/**
 2. Tocá un proyecto para editarlo, o **"Add Projects"** para uno nuevo.
 3. Campos:
    - **Title** — nombre del proyecto.
-   - **Description** — resumen corto.
+   - **Description** — resumen corto, en **dos idiomas** (English / Español).
+     Si dejás el español vacío, se muestra el inglés en ambos.
    - **Screenshot** — subí la imagen (se guarda en `public/assets/projects/`).
    - **Web demo URL** — link al sitio/demo web. Dejalo vacío si es una app solo mobile.
    - **Google Play URL** — solo para apps Android (muestra el botón de Play Store).
@@ -173,7 +174,18 @@ Configuración necesaria una sola vez:
 
 ---
 
-## 5. Problemas comunes
+## 5. Idiomas (EN / ES)
+
+El sitio es bilingüe con un toggle arriba a la derecha. Por defecto carga en
+**inglés** y recuerda tu elección.
+
+- **Textos de la interfaz** (títulos, botones, formulario, etc.):
+  `src/i18n/translations.js` — editá las claves bajo `en` y `es`.
+- **Descripciones de proyectos**: bilingües desde el CMS (campos English / Español).
+- **Experiencia** (`src/data/experience.js`): cada `name`/`description` es `{ en, es }`.
+- Si un texto falta en español, se muestra el inglés automáticamente.
+
+## 6. Problemas comunes
 
 - **El panel local no guarda / "Failed to load"**: ¿está corriendo `npx decap-server`
   en otra terminal? El modo local lo necesita.

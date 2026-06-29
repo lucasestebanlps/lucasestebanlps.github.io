@@ -8,6 +8,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import ScrollToTop from './Helpers/ScrollToTop';
 import FireflyBackground from "./components/FireflyBackground/FireflyBackground";
 import Spinner from './components/Spinner/Spinner';
+import LanguageToggle from './components/LanguageToggle/LanguageToggle';
 
 // Code-split the certifications page so it doesn't load with the home page.
 const CertificationsPage = lazy(() => import('./pages/CertificationsPage'));
@@ -28,6 +29,7 @@ function App() {
   return (
     <>
       <FireflyBackground /> {/* Fondo de luciérnagas */}
+      <LanguageToggle />
       <ScrollToTop />
       <Suspense fallback={<Spinner />}>
         <Routes>

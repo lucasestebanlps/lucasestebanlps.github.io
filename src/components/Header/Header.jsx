@@ -12,11 +12,18 @@ import { fadeIn } from '../../variants.js';
 import { TypeAnimation } from 'react-type-animation'
 // scroll
 import { Link as ScrollLink } from 'react-scroll'
+// i18n
+import { useLanguage } from '../../i18n/LanguageContext'
 // css
 import './header.css'
 
 
 export default function Header() {
+    const { t } = useLanguage();
+
+    // Interleave each role with a 2s pause for the typing animation.
+    const roleSequence = t.hero.roles.flatMap((role) => [role, 2000]);
+
     return (
         <header className='container header' id='header'>
             <motion.article
@@ -27,20 +34,15 @@ export default function Header() {
                 className='text'>
                 <span className='text__eyebrow'>
                     <span className='text__eyebrow-dot' aria-hidden='true'></span>
-                    Available for new projects
+                    {t.hero.badge}
                 </span>
                 <h1
                     className='text__h1'>LUCAS ESTEBAN
                 </h1>
                 <div className='animation'>
-                    <span className='text__span'>I AM A </span> <TypeAnimation sequence={[
-                        'Developer',
-                        2000,
-                        'UX/UI Designer',
-                        2000,
-                        'Sales expert',
-                        2000,
-                    ]}
+                    <span className='text__span'>{t.hero.iam} </span> <TypeAnimation
+                        key={roleSequence.join('|')}
+                        sequence={roleSequence}
                         speed={50}
                         className='text__animation'
                         wrapper='span'
@@ -48,7 +50,7 @@ export default function Header() {
                     />
                 </div>
                 <p className='text__description'>
-                    Welcome to my digital world! My approach goes beyond writing code; it&apos;s about bringing innovative ideas and solutions to life that positively impact people.
+                    {t.hero.description}
                 </p>
                 <div className='header__cta'>
                     <ScrollLink
@@ -59,7 +61,7 @@ export default function Header() {
                         tabIndex={0}
                         role='button'
                     >
-                        View my work
+                        {t.hero.viewWork}
                     </ScrollLink>
                     <ScrollLink
                         to='contact'
@@ -69,7 +71,7 @@ export default function Header() {
                         tabIndex={0}
                         role='button'
                     >
-                        Get in touch
+                        {t.hero.getInTouch}
                     </ScrollLink>
                 </div>
                 <div className='buttons'>

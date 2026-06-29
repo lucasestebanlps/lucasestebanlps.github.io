@@ -2,11 +2,13 @@ import React from 'react'
 import { FiHome } from 'react-icons/fi';
 import { BsBriefcase, BsBook, BsChatSquare } from 'react-icons/bs';
 import { Link } from 'react-scroll';
+import { useLanguage } from '../../i18n/LanguageContext';
 import './nav.css'
 
 export default function Nav() {
+    const { t } = useLanguage();
     return (
-        <nav className='nav-bottom' aria-label='Section navigation'>
+        <nav className='nav-bottom' aria-label={t.nav.section}>
             <ul className='shadow-bottom'>
                 <li className="nav-list__item">
                     <Link
@@ -19,7 +21,7 @@ export default function Nav() {
                         className="nav-list__link"
                         tabIndex={0}
                         role="link"
-                        aria-label="Go to home"
+                        aria-label={t.nav.home}
                     >
                         <FiHome aria-hidden="true" />
                     </Link>
@@ -34,7 +36,7 @@ export default function Nav() {
                         className="nav-list__link"
                         tabIndex={0}
                         role="link"
-                        aria-label="Go to projects"
+                        aria-label={t.nav.projects}
                     >
                         <BsBriefcase aria-hidden="true" />
                     </Link>
@@ -49,7 +51,7 @@ export default function Nav() {
                         className="nav-list__link"
                         tabIndex={0}
                         role="link"
-                        aria-label="Go to about me"
+                        aria-label={t.nav.about}
                     >
                         <BsBook aria-hidden="true" />
                     </Link>
@@ -64,7 +66,7 @@ export default function Nav() {
                         className="nav-list__link"
                         tabIndex={0}
                         role="link"
-                        aria-label="Go to contact"
+                        aria-label={t.nav.contact}
                     >
                         <BsChatSquare aria-hidden="true" />
                     </Link>

@@ -7,6 +7,7 @@ import Button from '../Button/Button';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
 import { projects as projectsData } from '../../data/projects';
+import { useLanguage, localize } from '../../i18n/LanguageContext';
 import './projects.css';
 import '../Assets/Icons/icons.css'
 
@@ -14,15 +15,15 @@ import '../Assets/Icons/icons.css'
 const projects = [...projectsData].sort((a, b) => Number(b.featured) - Number(a.featured));
 
 // Builds the list of available links for a project (web demo + app stores).
-const getProjectLinks = (project) => {
+const getProjectLinks = (project, t) => {
     const links = [];
     if (project.link) {
         links.push({
             key: 'demo',
             url: project.link,
             icon: <BsFillPlayFill aria-hidden="true" />,
-            text: 'View Demo',
-            label: `Open ${project.title} demo`,
+            text: t.projects.viewDemo,
+            label: t.projects.openDemo.replace('{name}', project.title),
         });
     }
     if (project.playStore) {
@@ -30,8 +31,8 @@ const getProjectLinks = (project) => {
             key: 'play',
             url: project.playStore,
             icon: <FaGooglePlay aria-hidden="true" />,
-            text: 'Google Play',
-            label: `Get ${project.title} on Google Play`,
+            text: t.projects.googlePlay,
+            label: t.projects.onPlay.replace('{name}', project.title),
         });
     }
     if (project.appStore) {
@@ -39,14 +40,15 @@ const getProjectLinks = (project) => {
             key: 'appstore',
             url: project.appStore,
             icon: <FaAppStore aria-hidden="true" />,
-            text: 'App Store',
-            label: `Get ${project.title} on the App Store`,
+            text: t.projects.appStore,
+            label: t.projects.onAppStore.replace('{name}', project.title),
         });
     }
     return links;
 };
 
 export default function Projects() {
+    const { t, lang } = useLanguage();
     const [projectsToShow, setProjectsToShow] = useState(4);
     const allProjectsLoaded = projectsToShow >= projects.length;
 
@@ -75,9 +77,9 @@ export default function Projects() {
                 viewport={{ once: true, amount: 0 }}
                 className='projects__header'
             >
-                <h2 className='projects__title h2'>Projects</h2>
+                <h2 className='projects__title h2'>{t.projects.title}</h2>
                 <p className='section__subtitle'>
-                    A selection of things I&apos;ve built — from client work to personal experiments.
+                    {t.projects.subtitle}
                 </p>
             </motion.div>
 
@@ -98,11 +100,11 @@ export default function Projects() {
                                 <div className='overlay__group'>
                                     <div>
                                         <span className='overlay__span-title'>{project.title}</span>
-                                        <span className='overlay__span-description'>{project.description}</span>
+                                        <span className='overlay__span-description'>{localize(project.description, lang)}</span>
                                         <span className='technologies'>{renderTechnologyIcons(project.technologies)}</span>
                                     </div>
                                     <div className='project__links'>
-                                        {getProjectLinks(project).map((link) => (
+                                        {getProjectLinks(project, t).map((link) => (
                                             <Button
                                                 key={link.key}
                                                 className='icon'
@@ -117,7 +119,7 @@ export default function Projects() {
                         </div>
 
                         <div className="project__button--responsive">
-                            {getProjectLinks(project).map((link) => (
+                            {getProjectLinks(project, t).map((link) => (
                                 <Button
                                     key={link.key}
                                     label={link.text}
@@ -142,7 +144,7 @@ export default function Projects() {
                     onClick={loadMoreProjects}
                     disabled={allProjectsLoaded}
                     className={`btn btn-lg ${allProjectsLoaded ? 'btn-disabled' : 'btn'}`}
-                    label={allProjectsLoaded ? 'All Projects loaded' : 'Load more projects'}
+                    label={allProjectsLoaded ? t.projects.allLoaded : t.projects.loadMore}
                 />
             </motion.div>
         </section>

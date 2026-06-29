@@ -5,12 +5,15 @@ import ContactForm from './ContactForm/ContactForm';
 import { motion } from 'framer-motion'
 // variants
 import { fadeIn } from '../../variants';
+// i18n
+import { useLanguage } from '../../i18n/LanguageContext';
 // css
 import './Contact.css'
 
 
 
 export default function Contact() {
+  const { t } = useLanguage();
   return (
     <footer className='container footer' id='contact'>
       {/* text */}
@@ -25,11 +28,11 @@ export default function Contact() {
 
         <h2
           className='h2 footer__texts-title'>
-          Get in touch
+          {t.contact.title}
         </h2>
         <h4
           className='footer__texts-description'>
-          Let&apos;s work <br /> together!
+          {t.contact.headingTop} <br /> {t.contact.headingBottom}
         </h4>
       </motion.article>
       <ContactForm />

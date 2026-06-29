@@ -2,7 +2,10 @@
   "projects": [
     {
       "title": "Applichiamoci",
-      "description": "Design and development of Applichiamoci, an app to connect those in need with vital resources. Available on Play Store :)",
+      "description": {
+        "en": "Design and development of Applichiamoci, an app to connect those in need with vital resources. Available on Play Store :)",
+        "es": "Diseño y desarrollo de Applichiamoci, una app para conectar a quienes lo necesitan con recursos vitales. Disponible en Play Store :)"
+      },
       "image": "/assets/projects/applichiamoci.png",
       "link": "",
       "playStore": "https://play.google.com/store/apps/details?id=com.fonzadione_emmanuel.applichiamoc",
@@ -15,7 +18,10 @@
     },
     {
       "title": "AutoInsurance Quote",
-      "description": "A user-friendly tool for quickly obtaining insurance quotes for automobiles.",
+      "description": {
+        "en": "A user-friendly tool for quickly obtaining insurance quotes for automobiles.",
+        "es": "Una herramienta simple para obtener cotizaciones de seguros de autos rápidamente."
+      },
       "image": "/assets/projects/autoinsurance-quote.jpg",
       "link": "https://insurancequoter.netlify.app",
       "featured": false,
@@ -27,7 +33,10 @@
     },
     {
       "title": "OnlineCourse Mart",
-      "description": "Your one-stop shop for online courses, featuring a fully functional shopping cart for adding, removing, and modifying course selections.",
+      "description": {
+        "en": "Your one-stop shop for online courses, featuring a fully functional shopping cart for adding, removing, and modifying course selections.",
+        "es": "Tu tienda integral de cursos online, con un carrito de compras totalmente funcional para agregar, quitar y modificar la selección de cursos."
+      },
       "image": "/assets/projects/onlinecourse-mart.jpg",
       "link": "https://shoppingcart-ls.netlify.app/",
       "featured": false,
@@ -39,7 +48,10 @@
     },
     {
       "title": "CityWeather Lookup",
-      "description": "Instantly check the weather forecast for cities worldwide with this convenient weather lookup tool.",
+      "description": {
+        "en": "Instantly check the weather forecast for cities worldwide with this convenient weather lookup tool.",
+        "es": "Consultá al instante el pronóstico del tiempo de ciudades de todo el mundo con esta práctica herramienta."
+      },
       "image": "/assets/projects/cityweather-lookup.jpg",
       "link": "https://weather-finder-lps.netlify.app",
       "featured": false,
@@ -51,7 +63,10 @@
     },
     {
       "title": "YaNoUso",
-      "description": "A project focused on promoting responsible consumption and sustainability. This is a UX/UI design project of my own, covering the entire process from market research to logo creation.",
+      "description": {
+        "en": "A project focused on promoting responsible consumption and sustainability. This is a UX/UI design project of my own, covering the entire process from market research to logo creation.",
+        "es": "Un proyecto enfocado en promover el consumo responsable y la sostenibilidad. Es un proyecto propio de diseño UX/UI que abarca todo el proceso, desde la investigación de mercado hasta la creación del logo."
+      },
       "image": "/assets/projects/yanouso.jpg",
       "link": "https://www.figma.com",
       "featured": true,
@@ -61,7 +76,10 @@
     },
     {
       "title": "MultiBrand Car Finder",
-      "description": "Explore a vast selection of cars from different manufacturers, filterable by brand, year, doors, price, and more.",
+      "description": {
+        "en": "Explore a vast selection of cars from different manufacturers, filterable by brand, year, doors, price, and more.",
+        "es": "Explorá una amplia selección de autos de distintas marcas, filtrables por marca, año, puertas, precio y más."
+      },
       "image": "/assets/projects/multibrand-car-finder.jpg",
       "link": "https://car-finder-p.netlify.app",
       "featured": false,
@@ -73,7 +91,10 @@
     },
     {
       "title": "MailSender Pro",
-      "description": "Simplify email sending with this efficient mail delivery service designed to streamline your communication.",
+      "description": {
+        "en": "Simplify email sending with this efficient mail delivery service designed to streamline your communication.",
+        "es": "Simplificá el envío de emails con este eficiente servicio de correo diseñado para agilizar tu comunicación."
+      },
       "image": "/assets/projects/mailsender-pro.jpg",
       "link": "https://enviar-mails.netlify.app",
       "featured": false,
@@ -85,7 +106,10 @@
     },
     {
       "title": "Coinbase Clone",
-      "description": "Experience the world of cryptocurrency trading with a platform that mirrors the functionality of Coinbase.",
+      "description": {
+        "en": "Experience the world of cryptocurrency trading with a platform that mirrors the functionality of Coinbase.",
+        "es": "Viví la experiencia del trading de criptomonedas con una plataforma que replica la funcionalidad de Coinbase."
+      },
       "image": "/assets/projects/coinbase-clone.jpg",
       "link": "https://coinbase-clone-le.netlify.app",
       "featured": false,
@@ -97,7 +121,10 @@
     },
     {
       "title": "Startup Landing",
-      "description": "A minimalist webpage designed to introduce your startup to the world and make a lasting impression.",
+      "description": {
+        "en": "A minimalist webpage designed to introduce your startup to the world and make a lasting impression.",
+        "es": "Una página minimalista diseñada para presentar tu startup al mundo y dejar una impresión duradera."
+      },
       "image": "/assets/projects/startup-landing.jpg",
       "link": "https://startup-page-le.netlify.app",
       "featured": false,
@@ -111,7 +138,10 @@
     },
     {
       "title": "Parallax Café",
-      "description": "A visually stunning webpage for a cafe, complete with parallax scrolling effects to captivate visitors.",
+      "description": {
+        "en": "A visually stunning webpage for a cafe, complete with parallax scrolling effects to captivate visitors.",
+        "es": "Una página visualmente impactante para una cafetería, con efectos de scroll parallax para cautivar a los visitantes."
+      },
       "image": "/assets/projects/parallax-cafe.jpg",
       "link": "https://restaurant-parallax.netlify.app",
       "featured": false,
