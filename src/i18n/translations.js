@@ -16,7 +16,7 @@ export const translations = {
       iam: 'I AM A',
       roles: ['Developer', 'UX/UI Designer', 'Sales expert'],
       description:
-        "Welcome to my digital world! I'm a developer who builds web and mobile products with JavaScript and a lot of AI, turning ideas into real solutions that make people's lives easier. I love shipping, and I learn new technologies fast.",
+        "Welcome to my digital world! I'm a developer who turns ideas into real, shipped products — mobile apps and websites for businesses. I build with JavaScript and Flutter, sweat the details, and love getting things into people's hands.",
       viewWork: 'View my work',
       getInTouch: 'Get in touch',
     },
@@ -81,7 +81,7 @@ export const translations = {
       iam: 'SOY UN',
       roles: ['Desarrollador', 'Diseñador UX/UI', 'Experto en ventas'],
       description:
-        '¡Bienvenido a mi mundo digital! Soy un desarrollador que construye productos web y mobile con JavaScript y mucha IA, convirtiendo ideas en soluciones reales que le facilitan la vida a la gente. Me encanta lanzar productos y aprendo tecnologías nuevas rápido.',
+        '¡Bienvenido a mi mundo digital! Soy un desarrollador que convierte ideas en productos reales y terminados — apps mobile y sitios web para negocios. Construyo con JavaScript y Flutter, cuido los detalles y me encanta que las cosas lleguen a la gente.',
       viewWork: 'Ver mi trabajo',
       getInTouch: 'Contactame',
     },
