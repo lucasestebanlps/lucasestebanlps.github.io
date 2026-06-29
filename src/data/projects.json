@@ -25,7 +25,7 @@
       },
       "image": "/assets/projects/business.webp",
       "link": "https://my-website-azure-phi.vercel.app/",
-      "featured": false,
+      "featured": true,
       "technologies": [
         { "name": "simple-icons:html5", "iconColor": "#E34F26" },
         { "name": "simple-icons:css3", "iconColor": "#1572B6" },
