@@ -27,5 +27,18 @@ This is my front-end portfolio, showcasing some of my projects and web developme
 
 ![header screenshot of lucasestebanlps.github.io](./public/assets/screenshot.jpg)
 
+## Managing projects (CMS)
+
+Projects are managed with a web panel (Decap CMS). To add, edit or reorder
+projects without touching code, see **[docs/CMS.md](./docs/CMS.md)**.
+
+Quick start (local editing):
+
+```bash
+npx decap-server   # terminal 1
+npm run dev        # terminal 2
+# open http://localhost:5173/admin/
+```
+
 ## Link:
 https://lucasestebanlps.github.io
