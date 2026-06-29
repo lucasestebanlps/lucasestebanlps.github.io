@@ -16,7 +16,7 @@ export const translations = {
       iam: 'I AM A',
       roles: ['Developer', 'UX/UI Designer', 'Sales expert'],
       description:
-        "Welcome to my digital world! My approach goes beyond writing code; it's about bringing innovative ideas and solutions to life that positively impact people.",
+        "Welcome to my digital world! I'm a developer who builds web and mobile products with JavaScript and a lot of AI, turning ideas into real solutions that make people's lives easier. I love shipping, and I learn new technologies fast.",
       viewWork: 'View my work',
       getInTouch: 'Get in touch',
     },
@@ -81,7 +81,7 @@ export const translations = {
       iam: 'SOY UN',
       roles: ['Desarrollador', 'Diseñador UX/UI', 'Experto en ventas'],
       description:
-        '¡Bienvenido a mi mundo digital! Mi enfoque va más allá de escribir código: se trata de dar vida a ideas y soluciones innovadoras que impacten positivamente en las personas.',
+        '¡Bienvenido a mi mundo digital! Soy un desarrollador que construye productos web y mobile con JavaScript y mucha IA, convirtiendo ideas en soluciones reales que le facilitan la vida a la gente. Me encanta lanzar productos y aprendo tecnologías nuevas rápido.',
       viewWork: 'Ver mi trabajo',
       getInTouch: 'Contactame',
     },

@@ -8,10 +8,17 @@
 
 export const experiences = [
   {
-    name: { en: 'Flutter Developer', es: 'Desarrollador Flutter' },
+    name: { en: 'Developer', es: 'Desarrollador' },
     description: {
-      en: 'Experienced in building production-ready mobile apps using Flutter and Firebase, such as Applichiamoci and Eventz. Skilled in scalable architecture, geolocation, push notifications, and custom UI.',
-      es: 'Experiencia construyendo apps móviles listas para producción con Flutter y Firebase, como Applichiamoci y Eventz. Manejo de arquitectura escalable, geolocalización, notificaciones push e interfaces personalizadas.',
+      en: 'I build web and mobile products with JavaScript (React, plus Flutter & Dart for mobile) and back them with Firebase, including Cloud Functions written in TypeScript. I care about clean architecture, real shipping and learning new languages fast.',
+      es: 'Construyo productos web y mobile con JavaScript (React, y Flutter & Dart para mobile) sobre Firebase, incluyendo Cloud Functions escritas en TypeScript. Me importa la arquitectura limpia, lanzar de verdad y aprender lenguajes nuevos rápido.',
+    },
+  },
+  {
+    name: { en: 'AI Integration', es: 'Integración de IA' },
+    description: {
+      en: "AI is a core part of how I work and what I build. I use AI tools daily to ship faster, and I integrate them into products — like AI-powered receipt scanning to automate expense splitting in Roomies. Comfortable wiring LLMs and AI services into real workflows.",
+      es: 'La IA es parte central de cómo trabajo y de lo que construyo. Uso herramientas de IA todos los días para desarrollar más rápido, y las integro en productos — como el escaneo de tickets con IA para automatizar la división de gastos en Roomies. Cómodo conectando LLMs y servicios de IA en flujos reales.',
     },
   },
   {
